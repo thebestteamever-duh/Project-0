@@ -3,15 +3,23 @@
 
 
 # Monday 22APR2019 Tasks
-[] API Reseach
-[] Initial Draft of design
+[x] API Reseach
+[x] Initial Draft of design
 * Project Title
-    * 
+    * `Mindset`
 * Project Description
-    * 
-[] Sketch of Project
+    * For the indecisive Getting ready for day, get your Current Weather on location (Date Time)
+    * Based on how you're feeling, giving
+[x] Sketch of Project
 * APIs to be Used
-    * 
+    * [Sentiment Analysis](https://rapidapi.com/twinword/api/sentiment-analysis/details)
+    * [Inspirational Quote](https://rapidapi.com/HealThruWords/api/universal-inspirational-quotes)
+    * [Spotify](https://rapidapi.com/stefan.skliarov/api/Spotify)
+    * [Open Weather](hhttps://rapidapi.com/community/api/open-weather-map)
+    * [FOAAS](https://rapidapi.com/community/api/foaas)
+* Firebase
+    * User has to create an account - store username
+    * How many times they've used the app
     * 
 [] Git repositories cloned for everyone
 [] Team Member Duties
@@ -30,6 +38,7 @@
 [] Must use at least `two APIs`
 [] Must use `AJAX to pull data`
 [] Must utilize at least `one new library or technology` that we haven’t discussed
+    * Animate on Scroll
 [] Must have a polished `frontend / UI`
 [] Must meet `good quality coding standards` (indentation, scoping, naming)
 [] Must `NOT use alerts, confirms, or prompts` (look into modals!)
