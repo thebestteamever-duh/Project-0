@@ -9,7 +9,8 @@
     * `Mindset`
 * Project Description
     * For the indecisive Getting ready for day, get your Current Weather on location (Date Time)
-    * Based on how you're feeling, giving
+    * Based on how you're feeling, give the user a playlist to fit. If they're sad
+    something to cheer them up.
 [x] Sketch of Project
 * APIs to be Used
     * [Sentiment Analysis](https://rapidapi.com/twinword/api/sentiment-analysis/details)
@@ -24,13 +25,17 @@
 [] Git repositories cloned for everyone
 [] Team Member Duties
 * Michael
-    * 
+    * Spotify API
+    * What does the embed player look like
 * Stephanie
-    * 
+    * HTML / CSS
 * Elyria
-    * 
+    * HTML / CSS
 * Stephen
-    * 
+    * Quotes API
+
+#Designing MVP
+* Can Enter A mood and Produce Playlist, Quote, Weather, and Gif
 
 
 
@@ -79,6 +84,5 @@
 
 
 
-#Designing MVP
 
 
