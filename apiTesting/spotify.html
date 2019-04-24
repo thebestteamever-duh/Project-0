@@ -7,9 +7,9 @@
 
 
 
-    <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdPec7aLTmlC" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe id="player" src="" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-    https://open.spotify.com/playlist/37i9dQZF1DXdPec7aLTmlC
+   
   <h1>Spotify Web Playback SDK Quick Start Tutorial</h1>
   <h2>Open your console log: <code>View > Developer > JavaScript Console</code></h2>
 
@@ -30,8 +30,15 @@
         headers: {"Accept": "application/json", "Content-Type": "application/json"}
         }).then(function(response) {
         console.log(response.playlists.items[0].external_urls.spotify)
-        var url = response.playlists.items[0].external_urls.spotify
-
+        console.log(response.playlists.items[0])
+        var id = response.playlists.items[0].id
+        var urlBuilder = "https://open.spotify.com/embed/playlist/"
+        var link = urlBuilder + id;
+        console.log(link)
+        $("#player").attr("src", link)
+        //So far we can search, get a response and grab a url, what we have to look at is modifying the returned url
+        //to change from  https://open.spotify.com/playlist/37i9dQZF1DXdPec7aLTmlC to https://open.spotify.com/embed/playlist/37i9dQZF1DXdPec7aLTmlC
+        //and then place it in the iframe
         
         });
 
