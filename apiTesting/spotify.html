@@ -26,10 +26,10 @@
         $.ajax({
         url: queryURL,
         method: "GET",
-        headers: {"Accept": "application/json", "Content-Type": "application/json"}
+        headers: {"Accept": "application/json", "Content-Type": "application/json", "Authorization": "BQD0CR7GZmWI-97X-xrKgMWHy6q9r2tW0ohLB-prDY_DM8NOOIW50j_e4roy-pgVqdlBSSWABNb3WV48-2zhNAzFidoxC0GFyijL_zopHeEsDIQ00_aOZwQKXM1kMCDjtJmjytKiv0pHyExPW94e19Gy9Thp1anppQ"}
         }).then(function(response) {
-        console.log(response.playlists.items[0].external_urls.spotify)
-        console.log(response.playlists.items[0])
+        // console.log(response.playlists.items[0].external_urls.spotify)
+        console.log(response)
         var id = response.playlists.items[0].id
         var urlBuilder = "https://open.spotify.com/embed/playlist/"
         var link = urlBuilder + id;
