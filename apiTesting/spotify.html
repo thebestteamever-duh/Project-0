@@ -7,9 +7,9 @@
 
 
 
-    <iframe src="https://open.spotify.com/embed/user/ajmcdonald007/playlist/0K40Nv3cLP42RcKDwf41U5" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdPec7aLTmlC" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-
+    https://open.spotify.com/playlist/37i9dQZF1DXdPec7aLTmlC
   <h1>Spotify Web Playback SDK Quick Start Tutorial</h1>
   <h2>Open your console log: <code>View > Developer > JavaScript Console</code></h2>
 
@@ -18,46 +18,7 @@
     //spotify api hacking
     // Client ID facc86141dcf4025afaa50dfe18f85b1
     // Client Secret a2f1c888f95141c59b760399df45b2c2 
-    //embed playlist example - <iframe src="https://open.spotify.com/embed/user/ajmcdonald007/playlist/0K40Nv3cLP42RcKDwf41U5" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    // URI - spotify:user:ajmcdonald007:playlist:0K40Nv3cLP42RcKDwf41U5
-    // JSON example
-
-    // "name": "Northern Soul",
-    //     "owner": {
-    //       "display_name": "ajmcdonald007",
-    //       "external_urls": {
-    //         "spotify": "https://open.spotify.com/user/ajmcdonald007"
-    //       },
-    //       "href": "https://api.spotify.com/v1/users/ajmcdonald007",
-    //       "id": "ajmcdonald007",
-    //       "type": "user",
-    //       "uri": "spotify:user:ajmcdonald007"
-    //     },
-    //     "primary_color": null,
-    //     "public": null,
-    //     "snapshot_id": "MzQsNjRiYjNlYWNkY2JmZDdjNzc0YWUxYjc2MWUyOTYwMGE0YjYwOTdhZg==",
-    //     "tracks": {
-    //       "href": "https://api.spotify.com/v1/playlists/0K40Nv3cLP42RcKDwf41U5/tracks",
-    //       "total": 1260
-    //     },
-    //     "type": "playlist",
-    //     "uri": "spotify:playlist:0K40Nv3cLP42RcKDwf41U5"
-    //   },
-    //   {
-    //     "collaborative": false,
-    //     "external_urls": {
-    //       "spotify": "https://open.spotify.com/playlist/5jMYJPZHLVZr9OPWndoEug"
-    //     },
-    //     "href": "https://api.spotify.com/v1/playlists/5jMYJPZHLVZr9OPWndoEug",
-    //     "id": "5jMYJPZHLVZr9OPWndoEug",
-    //     "images": [
-    //       {
-    //         "height": null,
-    //         "url": "https://pl.scdn.co/images/pl/default/6be5b8f7b654f39e6b4ed2770ebeb87a7822ab7b",
-    //         "width": null
-    //       }
-    //     ],
-    var APIKey = "c615aa6dedmsh39f89562dade0d8p122543jsnc8984b13db35"
+ 
    var topic = "happy"
 
   var queryURL = "https://api.spotify.com/v1/search?q=" + topic + "&type=playlist" 
@@ -68,7 +29,9 @@
         method: "GET",
         headers: {"Accept": "application/json", "Content-Type": "application/json"}
         }).then(function(response) {
-        console.log(response.playlists.items)
+        console.log(response.playlists.items[0].external_urls.spotify)
+        var url = response.playlists.items[0].external_urls.spotify
+
         
         });
 
