@@ -8,15 +8,18 @@
 </head>
 <body>
 
- <script>
-     unirest.get("https://healthruwords.p.rapidapi.com/v1/quotes/?id=731&t=Wisdom&maxR=1&size=medium")
-.header("X-RapidAPI-Host", "healthruwords.p.rapidapi.com")
-.header("X-RapidAPI-Key", "c615aa6dedmsh39f89562dade0d8p122543jsnc8984b13db35")
-.end(function (result) {
-  console.log(result.status, result.headers, result.body);
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+       
+//      unirest.get("https://healthruwords.p.rapidapi.com/v1/quotes/?id=731&t=Wisdom&maxR=1&size=medium")
+// .header("X-RapidAPI-Host", "healthruwords.p.rapidapi.com")
+// .header("X-RapidAPI-Key", "c615aa6dedmsh39f89562dade0d8p122543jsnc8984b13db35")
+// .end(function (result) {
+//   console.log(result.status, result.headers, result.body);
+   var APIKey = "c615aa6dedmsh39f89562dade0d8p122543jsnc8984b13db35"
+   var topic = "Wisdom"
 
-
-  var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=happy&type=playlist&key=" + APIKey;
+  var queryURL = "https://healthruwords.p.rapidapi.com/v1/quotes/?id=731&t=" + topic + "&maxR=1&size=medium&key=" + APIKey;
     
         // We then created an AJAX call
         $.ajax({
