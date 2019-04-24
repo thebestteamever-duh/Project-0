@@ -4,40 +4,76 @@
   <title>Spotify Web Playback SDK Quick Start Tutorial</title>
 </head>
 <body>
+
+
+
+    <iframe src="https://open.spotify.com/embed/user/ajmcdonald007/playlist/0K40Nv3cLP42RcKDwf41U5" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+
   <h1>Spotify Web Playback SDK Quick Start Tutorial</h1>
   <h2>Open your console log: <code>View > Developer > JavaScript Console</code></h2>
 
-  <script src="https://sdk.scdn.co/spotify-player.js"></script>
-  <script>
-    window.onSpotifyWebPlaybackSDKReady = () => {
-      const token = '[My Spotify Web API access token]';
-      const player = new Spotify.Player({
-        name: 'Web Playback SDK Quick Start Player',
-        getOAuthToken: cb => { cb(token); }
-      });
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    //spotify api hacking
+    // Client ID facc86141dcf4025afaa50dfe18f85b1
+    // Client Secret a2f1c888f95141c59b760399df45b2c2 
+    //embed playlist example - <iframe src="https://open.spotify.com/embed/user/ajmcdonald007/playlist/0K40Nv3cLP42RcKDwf41U5" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    // URI - spotify:user:ajmcdonald007:playlist:0K40Nv3cLP42RcKDwf41U5
+    // JSON example
 
-      // Error handling
-      player.addListener('initialization_error', ({ message }) => { console.error(message); });
-      player.addListener('authentication_error', ({ message }) => { console.error(message); });
-      player.addListener('account_error', ({ message }) => { console.error(message); });
-      player.addListener('playback_error', ({ message }) => { console.error(message); });
+    // "name": "Northern Soul",
+    //     "owner": {
+    //       "display_name": "ajmcdonald007",
+    //       "external_urls": {
+    //         "spotify": "https://open.spotify.com/user/ajmcdonald007"
+    //       },
+    //       "href": "https://api.spotify.com/v1/users/ajmcdonald007",
+    //       "id": "ajmcdonald007",
+    //       "type": "user",
+    //       "uri": "spotify:user:ajmcdonald007"
+    //     },
+    //     "primary_color": null,
+    //     "public": null,
+    //     "snapshot_id": "MzQsNjRiYjNlYWNkY2JmZDdjNzc0YWUxYjc2MWUyOTYwMGE0YjYwOTdhZg==",
+    //     "tracks": {
+    //       "href": "https://api.spotify.com/v1/playlists/0K40Nv3cLP42RcKDwf41U5/tracks",
+    //       "total": 1260
+    //     },
+    //     "type": "playlist",
+    //     "uri": "spotify:playlist:0K40Nv3cLP42RcKDwf41U5"
+    //   },
+    //   {
+    //     "collaborative": false,
+    //     "external_urls": {
+    //       "spotify": "https://open.spotify.com/playlist/5jMYJPZHLVZr9OPWndoEug"
+    //     },
+    //     "href": "https://api.spotify.com/v1/playlists/5jMYJPZHLVZr9OPWndoEug",
+    //     "id": "5jMYJPZHLVZr9OPWndoEug",
+    //     "images": [
+    //       {
+    //         "height": null,
+    //         "url": "https://pl.scdn.co/images/pl/default/6be5b8f7b654f39e6b4ed2770ebeb87a7822ab7b",
+    //         "width": null
+    //       }
+    //     ],
+    var APIKey = "c615aa6dedmsh39f89562dade0d8p122543jsnc8984b13db35"
+   var topic = "happy"
 
-      // Playback status updates
-      player.addListener('player_state_changed', state => { console.log(state); });
+  var queryURL = "https://api.spotify.com/v1/search?q=" + topic + "&type=playlist" 
+    
+        // We then created an AJAX call
+        $.ajax({
+        url: queryURL,
+        method: "GET",
+        headers: {"Accept": "application/json", "Content-Type": "application/json"}
+        }).then(function(response) {
+        console.log(response.playlists.items)
+        
+        });
 
-      // Ready
-      player.addListener('ready', ({ device_id }) => {
-        console.log('Ready with Device ID', device_id);
-      });
 
-      // Not Ready
-      player.addListener('not_ready', ({ device_id }) => {
-        console.log('Device ID has gone offline', device_id);
-      });
-
-      // Connect to the player!
-      player.connect();
-    };
+        // "Authorization": "Bearer BQDDRfDxBcOlsI46oQMTwK46lGXUOlwlweID_dU56F55t5EwqBQAxZEmxSZiOIU0HRWGoK0SIPDPm6ntH-bms7YfYWs1-FFwg8nlH176TPF_T7LWiZH4p1ebdjFmAMkIHW4AcPYw0xnSH5upZQHS_7j2Hao0_uqb3g"}
   </script>
 </body>
 </html>
