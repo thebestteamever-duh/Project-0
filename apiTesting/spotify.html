@@ -10,8 +10,7 @@
     <iframe id="player" src="" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
    
-  <h1>Spotify Web Playback SDK Quick Start Tutorial</h1>
-  <h2>Open your console log: <code>View > Developer > JavaScript Console</code></h2>
+ 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
@@ -36,9 +35,7 @@
         var link = urlBuilder + id;
         console.log(link)
         $("#player").attr("src", link)
-        //So far we can search, get a response and grab a url, what we have to look at is modifying the returned url
-        //to change from  https://open.spotify.com/playlist/37i9dQZF1DXdPec7aLTmlC to https://open.spotify.com/embed/playlist/37i9dQZF1DXdPec7aLTmlC
-        //and then place it in the iframe
+        
         
         });
 
