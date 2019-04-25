@@ -1,5 +1,5 @@
 // --------------------------------- QUOTES API ---------------------------
-function getQuote() {
+
 
 //set API key and topic variables
 var APIKey = "c615aa6dedmsh39f89562dade0d8p122543jsnc8984b13db35"
@@ -16,8 +16,12 @@ var APIKey = "c615aa6dedmsh39f89562dade0d8p122543jsnc8984b13db35"
         }).then(function(response) {
         console.log(response)
         
-        }) .then(function(response) {
-            
+        var quoteImage = response.url;
+        var author = $("<h3>").text(response.author)
+
+        $(".quoteText").prepend(quoteImage);
+        $(".quoteAuthor").prepend(author);
+
 
         });
-    }
+ 
