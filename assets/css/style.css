@@ -1,0 +1,32 @@
+.jumbotron {
+    height: 270px;
+    padding-top: 40px !important;
+    background-color: rgb(171, 210, 233) !important;
+    border-style: solid;
+}
+.dropright {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    color: rgba(35, 75, 112, 0.795) !important;
+    background-color: rgba(209, 208, 208, 0.979) !important;
+}
+
+.dropdown-menu a {
+    font-size: 17px;
+}
+
+.spotifyDiv, .weatherDiv {
+    background-color: rgb(138, 102, 138);
+    border-style: solid;
+    height: 250px;
+    opacity: .7;
+}
+.quoteDiv, .horoscopeDiv {
+    background-color: rgb(146, 192, 146);
+    border-style: solid;
+    height: 120px;
+    opacity: .7;
+}
