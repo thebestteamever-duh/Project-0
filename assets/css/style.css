@@ -207,6 +207,18 @@ h1 {
     text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
 }
 
+/* weather */
+.fas {
+    height: 100px;
+}
+#sunset {
+    font-weight: bold;
+    color: rgb(209, 197, 184);
+}
+#humidity {
+    font-weight: bold;
+    color: rgb(209, 197, 184);
+}
 
 
 /* ----------------------------------------- media queries ---------------------------------- */
