@@ -4,33 +4,52 @@
   <title>Spotify Web Playback SDK Quick Start Tutorial</title>
 </head>
 <body>
-  <h1>Spotify Web Playback SDK Quick Start Tutorial</h1>
-  <h2>Open your console log: <code>View > Developer > JavaScript Console</code></h2>
+  <h1>The Spotify Player Should Display Below:</h1>
+  <iframe id="player" src="" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 
   <!-- <script src="https://sdk.scdn.co/spotify-player.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
     
-      var ClientID = "facc86141dcf4025afaa50dfe18f85b1";
-      var ClientSecret = "a2f1c888f95141c59b760399df45b2c2";
-      var bearer = ""
+    var ClientID = "facc86141dcf4025afaa50dfe18f85b1";
+    var ClientSecret = "a2f1c888f95141c59b760399df45b2c2";
+    var bearer = ""
+    var tokenType = ""
+    var topic = "happy"
    
     // function auth (){
-        var authURL = "https://cors-anywhere.herokuapp.com/https://accounts.spotify.com/api/token"
-       
-        $.ajax({
-      url: authURL,
-      method: "POST",
+    var authURL = "https://cors-anywhere.herokuapp.com/https://accounts.spotify.com/api/token"
+    
+    var queryURL = "https://api.spotify.com/v1/search?q=" + topic + "&type=playlist"   
+    $.ajax({
+    url: authURL,
+    method: "POST",
     headers: {
-    "Authorization": "Basic ZmFjYzg2MTQxZGNmNDAyNWFmYWE1MGRmZTE4Zjg1YjE6YTJmMWM4ODhmOTUxNDFjNTliNzYwMzk5ZGY0NWIyYzI="},
-     data: {
-     "grant_type": "client_credentials"
-   },    
+      "Authorization": "Basic ZmFjYzg2MTQxZGNmNDAyNWFmYWE1MGRmZTE4Zjg1YjE6YTJmMWM4ODhmOTUxNDFjNTliNzYwMzk5ZGY0NWIyYzI="},
+    data: {
+     "grant_type": "client_credentials"},    
       }).then(function(response) {
-      // console.log(response.playlists.items[0].external_urls.spotify)
-     console.log(response)
-     var bearer = response.access_token
+      console.log(response)
+      bearer = response.access_token
+      tokenType = response.token_type;
+      var auth = tokenType + " " + bearer;
+      console.log(auth)
+      $.ajax({
+        url: queryURL,
+        method: "GET",
+        headers: {"Accept": "application/json", "Content-Type": "application/json", "Authorization": auth}
+        }).then(function(response) {
+        // console.log(response.playlists.items[0].external_urls.spotify)
+        console.log(response)
+        var id = response.playlists.items[8].id
+        var urlBuilder = "https://open.spotify.com/embed/playlist/"
+        var link = urlBuilder + id;
+        console.log(link)
+        $("#player").attr("src", link)
+        
+        
+        });
       
    
         
