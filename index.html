@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <title>Our First Project</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Rubik:700,900" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 
 
@@ -49,35 +51,37 @@
             <div class="spotifyDiv col-md-8">
                 <h2> Here will go the playlist</h2>
             </div>
-    
+
             <div class="weatherDiv col-md-4">
                 <h2>Today's Weather</h2>
                 <hr class="my-4">
                 <div class="weather-info">
-                    <h2>79</h2>
-                    <i class="fas fa-cloud fa-5x"></i>
+                    <h2 id="temp">79</h2>
+                    <img class="fas fa-cloud fa-5x"></i>
                 </div>
                 <div class="facts">
-                    <p>overcast clouds</p>
-                    <p>humidity: 89%</p>
-                    <p>sunset: 7:29 PM</p>
+                    <p id="weatherDescription"></p>
+                    <p>humidity: <span id="humidity">89%</span></p>
+                    <p>sunset: <span id="sunset"> Maybe</span></p>
                 </div>
             </div>
         </div>
-    
+
         <div class="row">
-        <div class="quoteDiv col-md-6">
-            <h2>Today's Quote</h2>
-            <hr class="my-4">
-            <p>Chuck Norris once visited the Virgin Islands. They are now The Islands.</p>
-        </div>
-    
-        <div class="horoscopeDiv col-md-6">
-            <h2>...maybe a horoscope?</h2>
-            <hr class="my-4">
+            <div class="quoteDiv col-md-6">
+                <h2>Today's Quote</h2>
+                <hr class="my-4">
+                <p>Chuck Norris once visited the Virgin Islands. They are now The Islands.</p>
+            </div>
+
+            <div class="horoscopeDiv col-md-6">
+                <h2>...maybe a horoscope?</h2>
+                <hr class="my-4">
+            </div>
         </div>
     </div>
-    </div>
+
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -88,7 +92,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="assets/javascript/giphy.js"></script>
+    <script src="weather.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </body>
 
 </html>

@@ -8,7 +8,8 @@
 
 <body>
   <!-- Retrieved data will be dumped here -->
-  <div class="city"></div>
+  <div class="city">
+  </div>
   <div class="wind"></div>
   <div class="humidity"></div>
   <div class="temp"></div>
@@ -27,6 +28,7 @@
       method: "GET"
     }).then(function(response) {
       console.log(response.weather[0].description)
+      console.log(response)
       // Create CODE HERE to Log the queryURL
 
       // Create CODE HERE to log the resulting object
@@ -38,9 +40,14 @@
       // Create CODE HERE to calculate the temperature (converted from Kelvin)
       // Hint: To convert from Kelvin to Fahrenheit: F = (K - 273.15) * 1.80 + 32
       // Create CODE HERE to dump the temperature content into HTML
-
+      $(".city").text(response.weather[0].description);
     });
+
+    $(".city").text("hello")
+ 
   </script>
+
+
 </body>
 
 </html>
