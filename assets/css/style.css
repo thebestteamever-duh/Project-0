@@ -147,18 +147,13 @@ h1 {
 
 
 /* ----------------------------------------- quote and horoscope divs ---------------------------------- */
-.quoteDiv, .horoscopeDiv {
-    /* background-color: rgb(146, 192, 146); */
-    border-style: solid;
-    height: 120px;
-    /* opacity: .7; */
-}
 
 .quoteDiv {
     background: url(../images/blue_gradient.jpg) no-repeat center center;
     background-size: cover;
     border: none;
     min-height: 250px; 
+    padding: 15px;
 }
 
 .quoteDiv h2 {
@@ -167,8 +162,16 @@ h1 {
     color: white;
     text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
     font-size: 40px;    
-    padding-top: 20px;
     text-align: center;
+}
+
+.quoteAuthor h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400 !important;
+    color: white;
+    text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
+    text-align: center;
+    font-size: 20px;
 }
 
 .quoteDiv p {
@@ -178,7 +181,6 @@ h1 {
     text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
     text-align: center;
     font-size: 24px;
-    padding-top: 45px;
 }
 
 .horoscopeDiv {

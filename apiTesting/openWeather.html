@@ -8,7 +8,9 @@
 
 <body>
   <!-- Retrieved data will be dumped here -->
-  <div class="city"></div>
+  <div class="city">
+    <p>hello</p>
+  </div>
   <div class="wind"></div>
   <div class="humidity"></div>
   <div class="temp"></div>
@@ -40,7 +42,12 @@
       // Create CODE HERE to dump the temperature content into HTML
 
     });
+
+    $(".city").text("hello")
+    $(".city").text(response.weather[0].description);
   </script>
+
+
 </body>
 
 </html>
