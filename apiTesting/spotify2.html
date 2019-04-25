@@ -8,20 +8,23 @@
   <iframe id="player" src="" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 
-  <!-- <script src="https://sdk.scdn.co/spotify-player.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
-    
+    //ID and Secret from the spotify API Account
     var ClientID = "facc86141dcf4025afaa50dfe18f85b1";
     var ClientSecret = "a2f1c888f95141c59b760399df45b2c2";
+    //bearer to capture the bearer token received on authentication API call (POST)
     var bearer = ""
+    //token type required to authorized on the 2nd API call (GET)
     var tokenType = ""
     var topic = "happy"
    
-    // function auth (){
+    // Spotify API URL for for authentication
     var authURL = "https://cors-anywhere.herokuapp.com/https://accounts.spotify.com/api/token"
-    
+    //Spotify API URL to query for Playist
     var queryURL = "https://api.spotify.com/v1/search?q=" + topic + "&type=playlist"   
+
+    //API POST to authorize using the Client Credentials Auth Flow
     $.ajax({
     url: authURL,
     method: "POST",
@@ -33,14 +36,15 @@
       console.log(response)
       bearer = response.access_token
       tokenType = response.token_type;
+      //Concatenate the token type and bearer auth to submit complete API GET to search for matching playlists
       var auth = tokenType + " " + bearer;
       console.log(auth)
+      //API GET to query for playlists to match the topic(mood)
       $.ajax({
         url: queryURL,
         method: "GET",
         headers: {"Accept": "application/json", "Content-Type": "application/json", "Authorization": auth}
         }).then(function(response) {
-        // console.log(response.playlists.items[0].external_urls.spotify)
         console.log(response)
         var id = response.playlists.items[8].id
         var urlBuilder = "https://open.spotify.com/embed/playlist/"
