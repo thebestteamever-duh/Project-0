@@ -3,7 +3,7 @@ var APIKey = "c8bcf8bb7a6d8ef744d855a989993230";
 
 
 // Here we are building the URL we need to query the database
-var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=chicago,illinois&units=imperial&appid=" + APIKey;
+var queryURL = "https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=chicago,illinois&units=imperial&appid=" + APIKey;
 
 // We then created an AJAX call
 $.ajax({
