@@ -1,10 +1,14 @@
 //ID and Secret from the spotify API Account
 var ClientID = "facc86141dcf4025afaa50dfe18f85b1";
 var ClientSecret = "a2f1c888f95141c59b760399df45b2c2";
+
+
 //bearer to capture the bearer token received on authentication API call (POST)
 var bearer = ""
+
 //token type required to authorized on the 2nd API call (GET)
 var tokenType = ""
+
 // Spotify API URL for for authentication with cors anywhere to address CORS errors on authentication
 var authURL = "https://cors-anywhere.herokuapp.com/https://accounts.spotify.com/api/token"
 
@@ -13,10 +17,11 @@ var authURL = "https://cors-anywhere.herokuapp.com/https://accounts.spotify.com/
 //This function also is what kicks off the API POST and GET to 
 //Authenticate, Search, and Then update DOM with the Spotify player
 $(".dropdown-menu a").on("click", function () {
+
     //event prevent default will keep the page from reloading and losing the information already stored from the db
     // event.preventDefault();
 
- //jquery to capture the specified dropdown chosen, topic is the variable which is used to pass the user chosen mood to the API search
+    //jquery to capture the specified dropdown chosen, topic is the variable which is used to pass the user chosen mood to the API search
     var topic = $(this).text();
     // console.log("topic", topic)
 
@@ -33,12 +38,14 @@ $(".dropdown-menu a").on("click", function () {
     "grant_type": "client_credentials"},    
     }).then(function(response) {
     // console.log(response)
+
     //bearer and token type are required in order for the next API Call (which queries and recieves playlists)
     bearer = response.access_token
     tokenType = response.token_type;
+
     //Concatenate the token type and bearer auth to submit complete API GET to search for matching playlists
     var auth = tokenType + " " + bearer;
-    console.log(auth)
+    // console.log(auth)
 
     //API GET to query for playlists to match the topic(mood)
     $.ajax({
