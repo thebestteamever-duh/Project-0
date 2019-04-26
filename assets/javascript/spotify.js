@@ -8,47 +8,55 @@ var tokenType = ""
 
 //topic is the variable which is used to pass the user chosen 
 
-var topic = $("#mood").val()
-console.log("topic", topic)
+
+
 
 // Spotify API URL for for authentication with cors anywhere to address CORS errors on authentication
 var authURL = "https://cors-anywhere.herokuapp.com/https://accounts.spotify.com/api/token"
-//Spotify API URL to query for Playist
-var queryURL = "https://api.spotify.com/v1/search?q=" + topic + "&type=playlist"   
 
-//API POST to authorize using the Client Credentials Auth Flow
-$.ajax({
-url: authURL,
-method: "POST",
-headers: {
-  "Authorization": "Basic ZmFjYzg2MTQxZGNmNDAyNWFmYWE1MGRmZTE4Zjg1YjE6YTJmMWM4ODhmOTUxNDFjNTliNzYwMzk5ZGY0NWIyYzI="},
-data: {
- "grant_type": "client_credentials"},    
-  }).then(function(response) {
-  console.log(response)
-  //bearer and token type are required in order for the next API Call (which queries and recieves playlists)
-  bearer = response.access_token
-  tokenType = response.token_type;
-  //Concatenate the token type and bearer auth to submit complete API GET to search for matching playlists
-  var auth = tokenType + " " + bearer;
-  console.log(auth)
 
-  //API GET to query for playlists to match the topic(mood)
-  $.ajax({
-    url: queryURL,
-    method: "GET",
-    headers: {"Accept": "application/json", "Content-Type": "application/json", "Authorization": auth}
+$(".dropdown-menu a").on("click", function () {
+    //event prevent default will keep the page from reloading and losing the information already stored from the db
+    // event.preventDefault();
+ //jquery varibles to capture the specified form fields
+    var topic = $(this).text();
+    console.log("topic", topic)
+    //Spotify API URL to query for Playist
+    var queryURL = "https://api.spotify.com/v1/search?q=" + topic + "&type=playlist"   
+    //API POST to authorize using the Client Credentials Auth Flow
+    $.ajax({
+    url: authURL,
+    method: "POST",
+    headers: {
+    "Authorization": "Basic ZmFjYzg2MTQxZGNmNDAyNWFmYWE1MGRmZTE4Zjg1YjE6YTJmMWM4ODhmOTUxNDFjNTliNzYwMzk5ZGY0NWIyYzI="},
+    data: {
+    "grant_type": "client_credentials"},    
     }).then(function(response) {
     console.log(response)
-    //this is here for testing, what needs to be done is to create a math.random function to iject into []
-    //so that a random playlist from the 20 that come in the response is presented to the user
-    var id = response.playlists.items[8].id
-    var urlBuilder = "https://open.spotify.com/embed/playlist/"
-    var link = urlBuilder + id;
-    console.log(link)
-    //jquery to load into testing page and use as guide for main page
-    $("#player").attr("src", link)
-    
+    //bearer and token type are required in order for the next API Call (which queries and recieves playlists)
+    bearer = response.access_token
+    tokenType = response.token_type;
+    //Concatenate the token type and bearer auth to submit complete API GET to search for matching playlists
+    var auth = tokenType + " " + bearer;
+    console.log(auth)
+
+    //API GET to query for playlists to match the topic(mood)
+    $.ajax({
+        url: queryURL,
+        method: "GET",
+        headers: {"Accept": "application/json", "Content-Type": "application/json", "Authorization": auth}
+        }).then(function(response) {
+        console.log(response)
+        //this is here for testing, what needs to be done is to create a math.random function to iject into []
+        //so that a random playlist from the 20 that come in the response is presented to the user
+        var id = response.playlists.items[8].id
+        var urlBuilder = "https://open.spotify.com/embed/playlist/"
+        var link = urlBuilder + id;
+        console.log(link)
+        //jquery to load into testing page and use as guide for main page
+        $("#player").attr("src", link)
+        
     });
   
+});
 });
