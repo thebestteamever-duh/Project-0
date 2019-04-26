@@ -1,7 +1,7 @@
 /* ------------------ whole body ----------------- */
+
 #current-content {
     margin: 40px;
-
 }
 
 /* body {
@@ -9,6 +9,7 @@
 } */
 
 /* ------------------ header ----------------- */
+
 .logo-bar {
     display: flex;
     flex-direction: row;
@@ -28,12 +29,12 @@
     width: 100%;
     padding-bottom: 0px;
     height: 2px;
-    color:linen;
+    color: linen;
     background-color: linen;
-
 }
 
 /* -------------------------- jumbotron ------------------------------ */
+
 .jumbotron {
     height: 270px;
     padding-top: 40px !important;
@@ -68,6 +69,7 @@ h1 {
 }
 
 /* ---------------------------------- dropdown button ------------------------------- */
+
 .dropright {
     display: flex;
     justify-content: center;
@@ -87,7 +89,8 @@ h1 {
 }
 
 /* -------------------------------------- spotify div --------------------------------- */
-.spotifyDiv{
+
+.spotifyDiv {
     background-color: rgb(138, 102, 138);
     border-style: solid;
     min-height: 250px;
@@ -95,6 +98,7 @@ h1 {
 }
 
 /* ----------------------------------------- weather div ---------------------------------- */
+
 .weatherDiv {
     background: url(../images/blue_gradient.jpg) no-repeat center;
     background-size: cover;
@@ -120,10 +124,9 @@ h1 {
     justify-content: space-around;
     width: 100%;
     align-items: center;
-
 }
 
-.weather-info h2{
+.weather-info h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400 !important;
     color: white;
@@ -145,6 +148,19 @@ h1 {
     width: 100%;
 }
 
+.fas {
+    height: 100px;
+}
+
+#sunset {
+    font-weight: bold;
+    color: rgb(209, 197, 184);
+}
+
+#humidity {
+    font-weight: bold;
+    color: rgb(209, 197, 184);
+}
 
 /* ----------------------------------------- quote and horoscope divs ---------------------------------- */
 
@@ -152,7 +168,7 @@ h1 {
     background: url(../images/blue_gradient.jpg) no-repeat center center;
     background-size: cover;
     border: none;
-    min-height: 250px; 
+    min-height: 250px;
     padding: 15px;
 }
 
@@ -161,7 +177,7 @@ h1 {
     font-weight: 400 !important;
     color: white;
     text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
-    font-size: 40px;    
+    font-size: 40px;
     text-align: center;
 }
 
@@ -183,43 +199,35 @@ h1 {
     font-size: 24px;
 }
 
-.horoscopeDiv {
+.gifDiv {
     background: url(../images/pink_gradient.jpg) no-repeat center center;
     background-size: cover;
     min-height: 250px;
     border: none;
 }
 
-.horoscopeDiv h2 {
+.gifDiv h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400 !important;
     color: white;
     text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
-    font-size: 40px;    
+    font-size: 40px;
     padding-top: 20px;
     text-align: center;
 }
 
-.horoscope p {
+.gifDiv p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400 !important;
     color: white;
     text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
 }
 
-/* weather */
-.fas {
-    height: 100px;
+.gifDiv .gif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-#sunset {
-    font-weight: bold;
-    color: rgb(209, 197, 184);
-}
-#humidity {
-    font-weight: bold;
-    color: rgb(209, 197, 184);
-}
-
 
 /* ----------------------------------------- media queries ---------------------------------- */
 
@@ -228,5 +236,3 @@ h1 {
         margin: 25px;
     }
 }
-
-

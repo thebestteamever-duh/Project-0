@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Horoscope</title>
+</head>
+
+<body>
+    <div class="meh">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        // var feeling = "happy"
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=happy&api_key=FHh9mWC90FyTtVYHXSy5uFhHubUvyLWb&limit=10";
+
+        // We then created an AJAX call
+        $.ajax({
+            url: queryURL,
+            method: "GET",
+        }).then(function (response) {
+            console.log(response);
+
+            var results = response.data[8];
+            var feelingGif = $("<img>").addClass("gif");
+                feelingGif.attr("src", results.images.fixed_height.url);
+
+            $(".meh").append(feelingGif);
+        });
+
+    </script>
+
+
+</body>
+
+</html>
