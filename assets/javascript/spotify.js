@@ -47,7 +47,10 @@ $(".dropdown-menu a").on("click", function () {
         headers: {"Accept": "application/json", "Content-Type": "application/json", "Authorization": auth}
         }).then(function(response) {
         console.log(response)
-        //this is here for testing, what needs to be done is to create a math.random function to iject into []
+        //this is working for MVP, but what needs to be done is to create a math.random function so we can do
+        //response.playlists.items[i] to grab a random playlist from the search results
+
+
         //so that a random playlist from the 20 that come in the response is presented to the user
         var id = response.playlists.items[8].id
         var urlBuilder = "https://open.spotify.com/embed/playlist/"
