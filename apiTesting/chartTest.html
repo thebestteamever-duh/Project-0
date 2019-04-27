@@ -65,10 +65,17 @@
           ],
           datasets: [
             {
-              label: "My First dataset",
-              backgroundColor: "rgb(255, 99, 132)",
+              label: "The World's Mindset",
+              backgroundColor: [
+                "#facd50",
+                "#71cce1",
+                "#f4786c",
+                "#7edf5d",
+                "#8a73f0",
+                "#fb6262",
+              ],
               borderColor: "rgb(255, 99, 132)",
-              data: [0, 10, 5, 2, 20, 30, 45],
+              data: [20, 10, 5, 2, 20, 30, 45],
             }
           ]
         },
@@ -83,6 +90,13 @@
                     top: 0,
                     bottom: 0
                 }
+            },
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero: true,
+                }
+              }]
             },
 
         }
