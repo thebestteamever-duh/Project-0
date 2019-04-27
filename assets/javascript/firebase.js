@@ -68,14 +68,16 @@ database.ref().on("value", function(snapshot) {
     var dbTired = snapshot.val().fTired;
     var dbLove = snapshot.val().fLove;
 
-    console.log("fbHappy", dbHappy)
+    console.log("click numbers", dbHappy, " ", dbSad, " ", dbAngry, " ", dbScared, " ", dbTired, " ", dbLove);
 // Create Error Handling
 }, function(errorObject) {
     console.log("The read failed: " + errorObject.code);
 });
 
 
+
 // function makeChart() {
+
 Chart.defaults.global.defaultFontFamily = 'Roboto';
 var ctx = document.getElementById("myChart").getContext("2d");
       var chart = new Chart(ctx, {
@@ -104,7 +106,7 @@ var ctx = document.getElementById("myChart").getContext("2d");
                 "#fb6262",
               ],
               borderColor: "rgb(255, 99, 132)",
-              data: [20, 10, 5, 2, 20, 30, 45],
+              data: [10, 20, 30, 15, 10, 20],
             }
           ]
         },
@@ -131,6 +133,7 @@ var ctx = document.getElementById("myChart").getContext("2d");
         }
       });
 // }
+console.log(chart.data.datasets.data);
 
 
 
