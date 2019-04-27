@@ -59,11 +59,12 @@ $(".dropdown-menu a").on("click", function () {
         //response.playlists.items[i] to grab a random playlist from the search results
         
         //********Randomizer Code Goes Here*********
+        i = Math.floor(Math.random()*(response.playlists.items.length))
 
 
         //********Randomizer Code Goes Here*********
 
-        var id = response.playlists.items[8].id
+        var id = response.playlists.items[i].id
         var urlBuilder = "https://open.spotify.com/embed/playlist/"
         var link = urlBuilder + id;
         // console.log(link)
