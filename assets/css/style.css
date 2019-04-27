@@ -1,6 +1,5 @@
 /* ------------------ whole body ----------------- */
 
-
 body {
     width: 100%;
     margin: 0 auto;
@@ -102,10 +101,24 @@ h1 {
     text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
     font-size: 40px;
     padding-top: 20px;
-
 }
 
 /* ----------------------------------------- weather div ---------------------------------- */
+
+.widget-right__title {
+    font-size: 40px !important;
+}
+
+.widget-right__header--brown {
+    background-image: linear-gradient(to top left, rgb(216, 197, 92), white) !important;
+}
+.weather-right--brown {
+    background-image: linear-gradient(to top right, white, rgb(216, 197, 92)) !important;
+}
+
+.weather-right__layout {
+    background-image: linear-gradient(to bottom, white), rgb(216, 204, 145) !important;
+}
 
 .weatherDiv {
     background: url(../images/blue_gradient.jpg) no-repeat center;
@@ -114,7 +127,8 @@ h1 {
     /* align-content: space-around;
     display: block;
     /* flex-direction: row;
-    flex-wrap: wrap; */ */
+    flex-wrap: wrap; */
+    */
 }
 
 .weatherDiv h2 {
@@ -134,21 +148,21 @@ h1 {
     align-items: center;
 }
 
-.weather-info h2 {
+/* .weather-info h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400 !important;
     color: white;
     text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
     font-size: 80px;
-}
+} */
 
-.weatherDiv p {
+/* .weatherDiv p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400 !important;
     color: white;
     text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
-}
-
+} */
+/* 
 .facts {
     display: flex;
     flex-direction: row;
@@ -169,7 +183,7 @@ h1 {
 #humidity {
     font-weight: bold;
     color: rgb(209, 197, 184);
-}
+} */
 
 /* ----------------------------------------- quote and horoscope divs ---------------------------------- */
 
@@ -245,3 +259,4 @@ h1 {
         margin: 25px;
     }
 }
+
