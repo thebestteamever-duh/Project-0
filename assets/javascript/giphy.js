@@ -14,4 +14,7 @@
          feelingGif.attr("src", results.images.fixed_height.url);
 
      $(".gifDiv").append(feelingGif);
+
+    //  Still missing code to randomly choose gif from results 
+    
  });

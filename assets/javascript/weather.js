@@ -25,7 +25,7 @@ $.ajax({
   var time = moment.unix(sunset).format("HH: mm");
   
 
-  // Create CODE HERE to dump the temperature content into HTML
+  // Code to insert weather information onto HTML page
   $("#sunset").text(time);
   $("#temp").text(tempBase);
   $("#weatherDescription").text(response.weather[0].description);
