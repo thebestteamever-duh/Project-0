@@ -74,6 +74,62 @@ database.ref().on("value", function(snapshot) {
     console.log("The read failed: " + errorObject.code);
 });
 
+Chart.defaults.global.defaultFontFamily = 'Roboto';
+
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: "bar",
+
+        // The data for our dataset
+        data: {
+          labels: [
+            "Happy",
+            "Sad",
+            "Angry",
+            "Scared",
+            "Tired",
+            "Love",
+          ],
+          datasets: [
+            {
+              label: "The World's Mindset",
+              backgroundColor: [
+                "#facd50",
+                "#71cce1",
+                "#f4786c",
+                "#7edf5d",
+                "#8a73f0",
+                "#fb6262",
+              ],
+              borderColor: "rgb(255, 99, 132)",
+              data: [dbHappy, dbSad, dbAngry, dbScared, dbTired, dbLove],
+            }
+          ]
+        },
+
+        // Configuration options go here
+        options: {
+            responsive: true,
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    bottom: 0
+                }
+            },
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero: true,
+                }
+              }]
+            },
+
+        }
+      });
+
 
 
 
