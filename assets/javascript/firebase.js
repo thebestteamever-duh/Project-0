@@ -74,9 +74,10 @@ database.ref().on("value", function(snapshot) {
     console.log("The read failed: " + errorObject.code);
 });
 
-Chart.defaults.global.defaultFontFamily = 'Roboto';
 
-      var ctx = document.getElementById("myChart").getContext("2d");
+// function makeChart() {
+Chart.defaults.global.defaultFontFamily = 'Roboto';
+var ctx = document.getElementById("myChart").getContext("2d");
       var chart = new Chart(ctx, {
         // The type of chart we want to create
         type: "bar",
@@ -103,7 +104,7 @@ Chart.defaults.global.defaultFontFamily = 'Roboto';
                 "#fb6262",
               ],
               borderColor: "rgb(255, 99, 132)",
-              data: [dbHappy, dbSad, dbAngry, dbScared, dbTired, dbLove],
+              data: [20, 10, 5, 2, 20, 30, 45],
             }
           ]
         },
@@ -129,8 +130,9 @@ Chart.defaults.global.defaultFontFamily = 'Roboto';
 
         }
       });
+// }
 
 
 
 
- 
+
