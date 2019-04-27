@@ -33,12 +33,19 @@
     //     "Love"
 
 //Create an if Function to increment 
-    if (topic = "Happy"){ 
+    if (topic === "Happy"){ 
         happy++
-    } else if (topic = "Sad"){
+    } else if (topic === "Sad"){
         sad++
+    } else if (topic === "Angry"){
+        angry++
+    } else if (topic === "Scared"){
+        scared++
+    } else if (topic === "Tired"){
+        tired++
+    } else {
+        love++
     }
-
   
         
 
