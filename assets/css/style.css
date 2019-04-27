@@ -37,7 +37,6 @@ body {
 .jumbotron {
     height: 270px;
     padding-top: 40px !important;
-    /* background-color: rgb(171, 210, 233) !important; */
     background: url(../images/light-bokeh-texture-wallpaper-2.jpg) no-repeat center center fixed;
     background-size: cover;
     border-style: none;
@@ -91,7 +90,6 @@ h1 {
     background: url(../images/pink_gradient.jpg) no-repeat center;
     background-size: cover;
     background-color: rgb(138, 102, 138);
-    /* border-style: solid; */
     min-height: 250px;
     opacity: .7;
     text-align: center;
@@ -112,7 +110,6 @@ h1 {
 .weatherDiv {
     background: url(../images/blue_gradient.jpg) no-repeat center;
     background-size: cover;
-    /* height: 250px; */
     border: none;
     /* display: flex;
     flex-direction: row;
@@ -227,7 +224,7 @@ h1 {
 }
 
 .gifDiv p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', safpns-serif;
     font-weight: 400 !important;
     color: white;
     text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
