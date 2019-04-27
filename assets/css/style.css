@@ -94,7 +94,7 @@ h1 {
     background: url(../images/pink_gradient.jpg) no-repeat center;
     background-size: cover;
     background-color: rgb(138, 102, 138);
-    border-style: solid;
+    /* border-style: solid; */
     min-height: 250px;
     opacity: .7;
     text-align: center;
