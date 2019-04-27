@@ -50,26 +50,39 @@
     </div>
     <br><br>
 
-    <h3>The below will pop up after choosing an emotion:</h3>
     <div id="spotify">
         <div class="row">
             <div class="spotifyDiv col-md-8">
                 <h2> This morning's Playlist</h2>
                 <hr class="my-4">
-                <iframe id="player" src="" width="600" height="280" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe id="player" src="" width="600" height="280" frameborder="0" allowtransparency="true"
+                    allow="encrypted-media"></iframe>
             </div>
 
             <div class="weatherDiv col-md-4">
                 <h2>Today's Weather</h2>
                 <hr class="my-4">
                 <div class="weather-info">
-                    <h2 id="temp">79</h2>
-                    <img class="fas fa-cloud fa-5x"></i>
+                    <!-- <h2 id="temp">79</h2>
+                    <img class="fas fa-cloud fa-5x"></i> -->
+                    <div id="openweathermap-widget-15"></div>
+                    <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+                        window.myWidgetParam.push({
+                            id: 15, cityid: '4887398', appid: 'c8bcf8bb7a6d8ef744d855a989993230', units: 'imperial', containerid: 'openweathermap-widget-15',
+                        }); (
+                            function () {
+                                var script = document.createElement('script');
+                                script.async = true;
+                                script.charset = "utf-8";
+                                script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+                                var s = document.getElementsByTagName('script')[0];
+                                s.parentNode.insertBefore(script, s);
+                            })();</script>
                 </div>
                 <div class="facts">
                     <p id="weatherDescription"></p>
-                    <p>humidity: <span id="humidity">89%</span></p>
-                    <p>sunset: <span id="sunset"> Maybe</span></p>
+                    <p> <span id="humidity"></span></p>
+                    <p> <span id="sunset"> </span></p>
                 </div>
             </div>
         </div>
@@ -117,7 +130,7 @@
 
     </div>
 
-<br><br>
+    <br><br>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -126,8 +139,11 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
- 9566fe6804798891167e9792a56c24076b58227d
+        9566fe6804798891167e9792a56c24076b58227d crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
@@ -151,6 +167,14 @@
         <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
         
        
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="assets/javascript/giphy.js"></script>
+    <script src="assets/javascript/weather.js"></script>
+    <script src="assets/javascript/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script> -->
 
 </body>
 
