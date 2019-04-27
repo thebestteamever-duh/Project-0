@@ -10,7 +10,6 @@ $(".dropdown-menu a").on("click", function () {
         method: "GET",
     }).then(function (response) {
         var random = Math.floor(Math.random() * 21);
-        console.log("RESPONSE " + results);
 
         var results = response.data[random];
         var feelingGif = $("<img>").addClass("gif");

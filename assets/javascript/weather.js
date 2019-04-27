@@ -13,15 +13,15 @@ $.ajax({
 
 
   // Variables for Weather Information
-  var wDesc = response.weather[0].description;
+  // var wDesc = response.weather[0].description;
 
-  var icon = response.weather[0].icon
-  var iconUrl = "http://openweathermap.org/img/w/" + icon + ".png"
+  // var icon = response.weather[0].icon
+  // var iconUrl = "http://openweathermap.org/img/w/" + icon + ".png"
 
-  var tempBase = Math.round(response.main.temp);
+  // var tempBase = Math.round(response.main.temp);
 
-  var sunset = response.sys.sunset
-  var time = moment.unix(sunset).format("HH: mm");  
+  // var sunset = response.sys.sunset
+  // var time = moment.unix(sunset).format("HH: mm");  
 
   // Code to insert weather information onto HTML page
   // $("#sunset").text(time);
