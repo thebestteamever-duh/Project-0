@@ -8,6 +8,7 @@
     messagingSenderId: "4140115652"
 
   };
+  
   firebase.initializeApp(config);
 
   var database = firebase.database();
@@ -20,9 +21,11 @@
   var love = 0;
 
   $(".dropdown-menu a").on("click", function () {
-    event.preventDefault();
+    // event.preventDefault();
 
     var topic = $(this).text();
+    console.log(this)
+    console.log("clicked")
 
     //mood choice variables
    
@@ -38,6 +41,7 @@
 //Create an if Function to increment 
     if (topic === "Happy"){ 
         happy++
+        console.log("happy", happy)
     } else if (topic === "Sad"){
         sad++
     } else if (topic === "Angry"){
