@@ -251,6 +251,16 @@ h1 {
     margin-right: auto;
 }
 
+/* ----------------------------------------- Chart Div ---------------------------------- */
+.chart-container {
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+#myChart {
+    padding-bottom: 20px;
+}
+
 /* ----------------------------------------- media queries ---------------------------------- */
 
 @media only screen and (max-width: 400px) {
