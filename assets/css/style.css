@@ -111,9 +111,10 @@ h1 {
     background: url(../images/blue_gradient.jpg) no-repeat center;
     background-size: cover;
     border: none;
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; */
+    /* align-content: space-around;
+    display: block;
+    /* flex-direction: row;
+    flex-wrap: wrap; */ */
 }
 
 .weatherDiv h2 {
@@ -153,6 +154,7 @@ h1 {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+    margin-top: 50px;
 }
 
 .fas {
