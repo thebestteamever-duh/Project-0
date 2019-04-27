@@ -124,10 +124,6 @@ h1 {
     background: url(../images/blue_gradient.jpg) no-repeat center;
     background-size: cover;
     border: none;
-    /* align-content: space-around;
-    display: block;
-    /* flex-direction: row;
-    flex-wrap: wrap; */
 }
 
 .weatherDiv h2 {
@@ -249,6 +245,24 @@ h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+/* ----------------------------------------- youtube div ---------------------------------- */
+.youtubeDiv {
+    background: url(../images/blue_gradient.jpg) no-repeat center;
+    background-size: cover;
+    border: none;
+}
+
+.youtubeDiv h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400 !important;
+    color: white;
+    text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
+    font-size: 40px;
+    padding-top: 20px;
+    text-align: center;
 }
 
 /* ----------------------------------------- media queries ---------------------------------- */
