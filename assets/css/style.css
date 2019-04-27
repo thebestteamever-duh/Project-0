@@ -91,11 +91,23 @@ h1 {
 /* -------------------------------------- spotify div --------------------------------- */
 
 .spotifyDiv {
+    background: url(../images/pink_gradient.jpg) no-repeat center;
+    background-size: cover;
     background-color: rgb(138, 102, 138);
     border-style: solid;
     min-height: 250px;
     opacity: .7;
     text-align: center;
+}
+
+.spotifyDiv h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400 !important;
+    color: white;
+    text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
+    font-size: 40px;
+    padding-top: 20px;
+
 }
 
 /* ----------------------------------------- weather div ---------------------------------- */
