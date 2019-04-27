@@ -8,11 +8,11 @@
     messagingSenderId: "4140115652"
 
   };
-  
+
   firebase.initializeApp(config);
 
   var database = firebase.database();
-  
+  //variables used to for moods
   var happy = 0;
   var sad = 0;
   var angry = 0;
@@ -27,18 +27,10 @@
     console.log(this)
     console.log("clicked")
 
-    //mood choice variables
+ 
    
 
-    //*******Moods******* */
-    //    "Happy"
-    //    "Sad"
-    //    "Angry"
-    //     "Scared"
-    //     "Tired"
-    //     "Love"
-
-//Create an if Function to increment 
+//Create an if Function to increment the chosen topic
     if (topic === "Happy"){ 
         happy++
         console.log("happy", happy)
@@ -53,7 +45,7 @@
     } else {
         love++
     }
-
+//pass the updated clicks to firebase
   database.ref().set({
     fHappy: happy,
       fSad: sad,
@@ -65,6 +57,22 @@
 
 });
 
+
+//Pull database information out of Firebase 
+database.ref().on("value", function(snapshot) {
+    //**** */These variables will produce the number of clicks of each mood.****
+    var dbHappy = snapshot.val().fHappy;
+    var dbSad = snapshot.val().fSad;
+    var dbAngry = snapshot.val().fAngry;
+    var dbScared = snapshot.val().fScared;
+    var dbTired = snapshot.val().fTired;
+    var dbLove = snapshot.val().fLove;
+
+    console.log("fbHappy", dbHappy)
+// Create Error Handling
+}, function(errorObject) {
+    console.log("The read failed: " + errorObject.code);
+});
 
 
 
