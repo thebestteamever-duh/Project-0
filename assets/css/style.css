@@ -1,12 +1,11 @@
 /* ------------------ whole body ----------------- */
 
-#current-content {
-    margin: 40px;
-}
 
-/* body {
-    background: url(../images/prism.png);
-} */
+body {
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
 
 /* ------------------ header ----------------- */
 
@@ -112,9 +111,9 @@ h1 {
     background: url(../images/blue_gradient.jpg) no-repeat center;
     background-size: cover;
     border: none;
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
 }
 
 .weatherDiv h2 {
@@ -152,7 +151,7 @@ h1 {
 .facts {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
 }
 
