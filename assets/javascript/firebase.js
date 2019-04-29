@@ -1,3 +1,13 @@
+//hide content until button is clicked
+$("#spotify").slideUp();
+
+$("a").click(function(){
+  $("#spotify").slideDown();
+});
+
+
+
+
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyA9II18kgiRBsKko3xJVcsQ5ai9PsNJtMY",
