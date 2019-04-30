@@ -1,9 +1,9 @@
 //hide content until button is clicked
 $("#spotify").slideUp();
 
-$("a").click(function(){
-  $("#spotify").slideDown();
-});
+// $("a").click(function(){
+//   $("#spotify").slideDown();
+// });
 
 
 
@@ -30,6 +30,9 @@ var tired = 0;
 var love = 0;
 
 $(".dropdown-menu a").on("click", function() {
+
+  $("#spotify").slideDown();
+
   // event.preventDefault();
 
   var topic = $(this).text();
