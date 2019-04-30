@@ -50,8 +50,18 @@ $(".dropdown-menu a").on("click", function() {
     happy++;
     console.log("happy", happy);
     changeCss("red", "blue")
+    // $(".spotifyDiv").css("background-image", "linear-gradient(#f9b749, #f47467)");
+    // $(".weatherDiv").css("background-image", "linear-gradient(#6ecde3, #2a4755)");
+    // $(".gifDiv").css("background-image", "linear-gradient(#f9b749, #f47467)");
+    // $(".quoteDiv").css("background-image", "linear-gradient(#6ecde3, #2a4755)"); 
+    // $(".youtubeDiv").css("background-image", "linear-gradient(#6ecde3, #2a4755)");
   } else if (topic === "Sad") {
     sad++;
+    // $(".spotifyDiv").css("background-image", "linear-gradient(#6ecde3, #2a4755)";
+    // $(".weatherDiv").css("background-image", "linear-gradient(#8e54de, #6c32b4)");
+    // $(".gifDiv").css("background-image", "linear-gradient(#6ecde3, #2a4755)";
+    // $(".quoteDiv").css("background-image", "linear-gradient(#8e54de, #6c32b4)"); 
+    // $(".youtubeDiv").css("background-image", "linear-gradient(#8e54de, #6c32b4)");
   } else if (topic === "Angry") {
     angry++;
   } else if (topic === "Scared") {
