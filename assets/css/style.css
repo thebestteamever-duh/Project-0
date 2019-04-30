@@ -62,7 +62,7 @@ h1, .lead, .p {
 .display-4 {
     font-family: 'Rubik', sans-serif;
     font-weight: 900;
-    font-size: 100px!important;
+    font-size: 7.5vw!important;
     padding: 0px;
     margin: 0px;
     line-height: .9!important;
@@ -286,12 +286,12 @@ h1, .lead, .p {
 
 }
 
+
 @media only screen and (max-width: 728px) {
     .row {
-        margin-left: 0px;
-        margin-right: 0px;
+        margin-left: 0px!important;
+        margin-right: 0px!important;
     }
-
 
     .jumbotron {
         display: inline-block!important;
