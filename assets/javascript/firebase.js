@@ -5,8 +5,14 @@ $("#spotify").slideUp();
 //   $("#spotify").slideDown();
 // });
 
-
-
+//base function for changing css - then call this function below in the if, if else to trigger based on choice
+function changeCss(backgrd, txt) {
+  $("#mindset").css({
+    "background-color": backgrd,
+    'color': txt,
+   
+   });
+  }
 
 // Initialize Firebase
 var config = {
@@ -43,6 +49,7 @@ $(".dropdown-menu a").on("click", function() {
   if (topic === "Happy") {
     happy++;
     console.log("happy", happy);
+    changeCss("red", "blue")
   } else if (topic === "Sad") {
     sad++;
   } else if (topic === "Angry") {
