@@ -6,14 +6,46 @@ $("#spotify").slideUp();
 // });
 
 //base function for changing css - then call this function below in the if, if else to trigger based on choice
-function changeCss(backgrd, txt) {
-  $("#mindset").css({
-    "background-color": backgrd,
-    'color': txt,
-   
-   });
-  }
+// changeCss("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
+// function changeCss(yellow, pink, quote, gif, mindset, youtube) {
+//   $("#divSpotify").css({
+//     "background": "linear-gradient("yellow "," pink")",
+//    });
+//   //  #f9b749
+//   // #f47467
+//    $("#divWeather").css({
+//     "background": "",
+//     "background": weather,
+//    });
+//    $("#divQuote").css({
+//     "background": "",
+//     "background-color": quote,
+//    });
+//    $("#divGif").css({
+//     "background": "",
+//     "background-color": gif,
+//    });
+//    $("#divMindset").css({
+//     "background": "",
+//     "background-color": mindset,
+//    });
+//    $("#divYoutube").css({
+//     "background": "",
+//     "background-color": youtube,
+//    });
 
+
+  //  Happy("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
+  // Sad "#1d1e1f", "#282b2e", "#35393d", "#3e4954",	"#455566", "#5f6d9f"
+  // Angry "#fa8989", "#f64d52", "#a91834", "#840029", "#fddac3", "#832a2a"
+// Scared "#add2df", "#bdd2df", "#cdd2df", "#ddd2df", "#edd2df", #f6b5d4
+  // }
+  // Capri (#01BEFE), 
+  // Golden Yellow (#FFDD00)
+  // Amber (#FF7D00), 
+  // Vivid Raspberry (#FF006D)
+  // Spring Bud (#ADFF02)
+  // Electric Violet (#8F00FF).
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyA9II18kgiRBsKko3xJVcsQ5ai9PsNJtMY",
@@ -46,28 +78,32 @@ $(".dropdown-menu a").on("click", function() {
   console.log("clicked");
 
   //Create an if Function to increment the chosen topic
-  if (topic === "Happy") {
-    happy++;
-    console.log("happy", happy);
-    changeCss("red", "blue")
-    // $(".spotifyDiv").css("background-image", "linear-gradient(#f9b749, #f47467)");
-    // $(".weatherDiv").css("background-image", "linear-gradient(#6ecde3, #2a4755)");
-    // $(".gifDiv").css("background-image", "linear-gradient(#f9b749, #f47467)");
-    // $(".quoteDiv").css("background-image", "linear-gradient(#6ecde3, #2a4755)"); 
-    // $(".youtubeDiv").css("background-image", "linear-gradient(#6ecde3, #2a4755)");
+  if (topic === "dumb") {
+    // happy++;
+    // console.log("happy", happy);
+    // // changeCss("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
+    // // $(".contentDiv").css("background-image", "linear-gradient(#f9b749, #f47467)");
+   
   } else if (topic === "Sad") {
     sad++;
-    // $(".spotifyDiv").css("background-image", "linear-gradient(#6ecde3, #2a4755)";
-    // $(".weatherDiv").css("background-image", "linear-gradient(#8e54de, #6c32b4)");
-    // $(".gifDiv").css("background-image", "linear-gradient(#6ecde3, #2a4755)";
-    // $(".quoteDiv").css("background-image", "linear-gradient(#8e54de, #6c32b4)"); 
-    // $(".youtubeDiv").css("background-image", "linear-gradient(#8e54de, #6c32b4)");
-  } else if (topic === "Angry") {
+    $(".contentDiv").css("background-image", "linear-gradient(#6ecde3, #2a4755)");
+    
+  } else if (topic === "happy") {
+    happy++;
+    console.log("happy", happy);
+    // changeCss("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
+    $(".contentDiv").css("background-image", "linear-gradient(#f9b749, #f47467)");
+   
+  }else if (topic === "Angry") {
     angry++;
+    changeCss("#fa8989", "#f64d52", "#a91834", "#840029", "#fddac3", "#832a2a")
   } else if (topic === "Scared") {
     scared++;
+    changeCss("#add2df", "#bdd2df", "#cdd2df", "#ddd2df", "#edd2df", "#f6b5d4")
   } else if (topic === "Tired") {
     tired++;
+    $(".contentDiv").css("background", "linear-gradient(#8e54de, #6c32b4)");
+
   } else {
     love++;
   }

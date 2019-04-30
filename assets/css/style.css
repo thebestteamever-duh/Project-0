@@ -127,8 +127,8 @@ h1, .lead, .p {
 /* -------------------------------------- spotify div --------------------------------- */
 
 .spotifyDiv {
-    background: url(../images/pink_gradient.jpg) no-repeat center;
-    background-size: cover;
+    /* background: url(../images/pink_gradient.jpg) no-repeat center;
+    background-size: cover; */
     background-color: rgb(138, 102, 138);
     min-height: 250px;
     text-align: center;
@@ -162,8 +162,8 @@ h1, .lead, .p {
 }
 
 .weatherDiv {
-    background: url(../images/blue_gradient.jpg) no-repeat center;
-    background-size: cover;
+    /* background: url(../images/blue_gradient.jpg) no-repeat center;
+    background-size: cover; */
     border: none;
 }
 
@@ -188,8 +188,8 @@ h1, .lead, .p {
 /* ----------------------------------------- quote and horoscope divs ---------------------------------- */
 
 .quoteDiv {
-    background: url(../images/blue_gradient.jpg) no-repeat center center;
-    background-size: cover;
+    /* background: url(../images/blue_gradient.jpg) no-repeat center center;
+    background-size: cover; */
     border: none;
     min-height: 250px;
     padding: 15px;
@@ -232,8 +232,8 @@ h1, .lead, .p {
 }
 
 .gifDiv {
-    background: url(../images/pink_gradient.jpg) no-repeat center center;
-    background-size: cover;
+    /* background: url(../images/pink_gradient.jpg) no-repeat center center;
+    background-size: cover; */
     min-height: 250px;
     border: none;
 }
@@ -264,8 +264,8 @@ h1, .lead, .p {
 /* ----------------------------------------- youtube div ---------------------------------- */
 
 .youtubeDiv {
-    background: url(../images/blue_gradient.jpg) no-repeat center;
-    background-size: cover;
+    /* background: url(../images/blue_gradient.jpg) no-repeat center;
+    background-size: cover; */
     border: none;
     min-height: 250px;
 }
