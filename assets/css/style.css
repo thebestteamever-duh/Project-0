@@ -40,17 +40,32 @@ body {
     background-size: cover;
     border-style: none;
     border-radius: 0px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 h1, .lead, .p {
     color: white;
     text-shadow: 0px 1px 10px rgba(0, 0, 0, 1);
-    text-align: center;
+    text-align: left;
 }
 
-h1 {
+.headline {
+    width: 50%;
+    padding-left: 50px;
+}
+
+.headline-mobile {
+    display: none;
+}
+.display-4 {
     font-family: 'Rubik', sans-serif;
     font-weight: 900;
+    font-size: 100px!important;
+    padding: 0px;
+    margin: 0px;
+    line-height: .9!important;
 }
 
 .lead, .p {
@@ -72,15 +87,27 @@ h1 {
     justify-content: center;
 }
 
+.mood-list {
+    width: 50%;
+}
+
 .btn {
-    border: 2px solid #1b3a47 !important;
-    color: #1b3a47 !important;
-    min-width: 40% !important;
-    background: linear-gradient(#fff, #efe8df);
+    /* border: 2px solid #1b3a47 !important;
+    color: #1b3a47 !important; */
+    border: none!important;
+    min-width: 50% !important;
+    background: linear-gradient(#ff772d, #f5905a);
+    box-shadow: 0px 0px 5px #00000000;
 }
 
 .dropdown-menu a {
     font-size: 17px;
+    background: linear-gradient(#fcc435, #ffc83e);
+    border: none!important;
+    color: #ffffff;
+}
+.dropdown-menu a:hover {
+    color: #ff772d!important;
 }
 
 /* -------------------------------------- spotify div --------------------------------- */
@@ -143,42 +170,6 @@ h1 {
     align-items: center;
 }
 
-/* .weather-info h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400 !important;
-    color: white;
-    text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
-    font-size: 80px;
-} */
-
-/* .weatherDiv p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400 !important;
-    color: white;
-    text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
-} */
-/* 
-.facts {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 50px;
-}
-
-.fas {
-    height: 100px;
-}
-
-#sunset {
-    font-weight: bold;
-    color: rgb(209, 197, 184);
-}
-
-#humidity {
-    font-weight: bold;
-    color: rgb(209, 197, 184);
-} */
 
 /* ----------------------------------------- quote and horoscope divs ---------------------------------- */
 
@@ -280,6 +271,45 @@ h1 {
 @media only screen and (max-width: 400px) {
     #current-content {
         margin: 25px;
+    }
+}
+
+@media only screen and (max-width: 728px) {
+    .row {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+
+    .jumbotron {
+        display: inline-block!important;
+        width: 100%!important;
+        margin: 0 auto;
+        height: auto;
+    }
+  
+    .mobile {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+    .headline-mobile {
+        display: inline-block;
+        text-align: center;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 700;
+        font-size: 40px!important;
+        margin: 0 auto;
+    }
+
+    .display-4 {
+        display: none;
+    }
+
+    .mood-list {
+        margin: 0 auto;
     }
 }
 

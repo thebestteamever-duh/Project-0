@@ -27,27 +27,37 @@
         <img src="assets/images/Mindset_logo-01.png" class="logo-image" alt="mindset-logo">
     </div>
     <hr class="header-bar">
-    <div class="jumbotron">
-        <h1 class="display-4">Project 0</h1>
-        <p class="lead">Start your day right with this app!</p>
+    <div class="jumbotron row">
+        <div class="headline col-6">
+            <h1 class="display-4">Choose</h1>
+            <h1 class="display-4">Your</h1>
+            <h1 class="display-4">Mood</h1>
+        </div>
+        <div class="mobile">
+            <h1 class="headline-mobile">Choose Your Mood</h1>
+        
+        </div>
+        <!-- <p class="lead">Start your day right with this app!</p>
         <hr class="my-4">
-        <p class="p">Select your mood and let the app start your day!</p>
+        <p class="p">Select your mood and let the app start your day!</p> -->
+       <div class="mood-list col-6">
+            <div class="dropright">
+                <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    I'm feeling...
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a id="mood" class="dropdown-item" href="#" value="Happy">Happy</a>
+                    <a id="mood" class="dropdown-item" href="#" value="Sad">Sad</a>
+                    <a id="mood" class="dropdown-item" href="#" value="Angry">Angry</a>
+                    <a id="mood" class="dropdown-item" href="#" value="Scared">Scared</a>
+                    <a id="mood" class="dropdown-item" href="#" value="Tired">Tired</a>
+                    <a id="mood" class="dropdown-item" href="#" value="Love">Love</a>
+                </div>
+            </div>
+       </div>
     </div>
 
-    <div class="dropright">
-        <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Your Current Emotion
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a id="mood" class="dropdown-item" href="#" value="Happy">Happy</a>
-            <a id="mood" class="dropdown-item" href="#" value="Sad">Sad</a>
-            <a id="mood" class="dropdown-item" href="#" value="Angry">Angry</a>
-            <a id="mood" class="dropdown-item" href="#" value="Scared">Scared</a>
-            <a id="mood" class="dropdown-item" href="#" value="Tired">Tired</a>
-            <a id="mood" class="dropdown-item" href="#" value="Love">Love</a>
-        </div>
-    </div>
     <br><br>
 
     <div id="spotify">
