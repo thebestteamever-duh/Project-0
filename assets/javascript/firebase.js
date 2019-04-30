@@ -6,10 +6,10 @@ $("#spotify").slideUp();
 // });
 
 //base function for changing css - then call this function below in the if, if else to trigger based on choice
-function changeCss(backgrd, txt) {
+function changeCss() {
   $("#mindset").css({
-    "background-color": backgrd,
-    'color': txt,
+    "background-color": "#01BEFE"
+    
    
    });
   }
