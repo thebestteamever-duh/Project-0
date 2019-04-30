@@ -6,14 +6,43 @@ $("#spotify").slideUp();
 // });
 
 //base function for changing css - then call this function below in the if, if else to trigger based on choice
-function changeCss() {
-  $("#mindset").css({
-    "background-color": "#01BEFE"
-    
-   
+changeCss("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
+function changeCss(spotify, weather, quote, gif, mindset, youtube) {
+  $("#divSpotify").css({
+    "background": "",
+    "background-color": spotify,
    });
+   $("#divWeather").css({
+    "background": "",
+    "background-color": weather,
+   });
+   $("#divQuote").css({
+    "background": "",
+    "background-color": quote,
+   });
+   $("#divGif").css({
+    "background": "",
+    "background-color": gif,
+   });
+   $("#divMindset").css({
+    "background": "",
+    "background-color": mindset,
+   });
+   $("#divYoutube").css({
+    "background": "",
+    "background-color": youtube,
+   });
+  //  Happy("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
+  // Sad "#1d1e1f", "#282b2e", "#35393d", "#3e4954",	"#455566", "#5f6d9f"
+  // Angry "#fa8989", "#f64d52", "#a91834", "#840029", "#fddac3", "#832a2a"
+// Scared "#add2df", "#bdd2df", "#cdd2df", "#ddd2df", "#edd2df", #f6b5d4
   }
-
+  // Capri (#01BEFE), 
+  // Golden Yellow (#FFDD00)
+  // Amber (#FF7D00), 
+  // Vivid Raspberry (#FF006D)
+  // Spring Bud (#ADFF02)
+  // Electric Violet (#8F00FF).
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyA9II18kgiRBsKko3xJVcsQ5ai9PsNJtMY",
@@ -49,13 +78,16 @@ $(".dropdown-menu a").on("click", function() {
   if (topic === "Happy") {
     happy++;
     console.log("happy", happy);
-    changeCss("red", "blue")
+    changeCss("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
   } else if (topic === "Sad") {
     sad++;
+    changeCss("#1d1e1f", "#282b2e", "#35393d", "#3e4954",	"#455566", "#5f6d9f")
   } else if (topic === "Angry") {
     angry++;
+    changeCss("#fa8989", "#f64d52", "#a91834", "#840029", "#fddac3", "#832a2a")
   } else if (topic === "Scared") {
     scared++;
+    changeCss("#add2df", "#bdd2df", "#cdd2df", "#ddd2df", "#edd2df", "#f6b5d4")
   } else if (topic === "Tired") {
     tired++;
   } else {
