@@ -126,9 +126,9 @@ h1, .lead, .p {
 
 /* -------------------------------------- spotify div --------------------------------- */
 
-.spotifyDiv {
-    /* background: url(../images/pink_gradient.jpg) no-repeat center;
-    background-size: cover; */
+.contentDiv {
+    /* background: url(../images/pink_gradient.jpg) no-repeat center; */
+    background-size: cover;
     background-color: rgb(138, 102, 138);
     min-height: 250px;
     text-align: center;
@@ -161,11 +161,11 @@ h1, .lead, .p {
     background-image: linear-gradient(to bottom, white), rgb(216, 204, 145) !important;
 }
 
-.weatherDiv {
+/* .weatherDiv {
     /* background: url(../images/blue_gradient.jpg) no-repeat center;
     background-size: cover; */
     border: none;
-}
+} */
 
 .weatherDiv h2 {
     font-family: 'Roboto', sans-serif;
@@ -187,13 +187,13 @@ h1, .lead, .p {
 
 /* ----------------------------------------- quote and horoscope divs ---------------------------------- */
 
-.quoteDiv {
+/* .quoteDiv {
     /* background: url(../images/blue_gradient.jpg) no-repeat center center;
     background-size: cover; */
     border: none;
     min-height: 250px;
     padding: 15px;
-}
+} */
 
 .quoteDiv h2 {
     font-family: 'Roboto', sans-serif;
@@ -232,8 +232,8 @@ h1, .lead, .p {
 }
 
 .gifDiv {
-    /* background: url(../images/pink_gradient.jpg) no-repeat center center;
-    background-size: cover; */
+    /* background: url(../images/pink_gradient.jpg) no-repeat center center; */
+    background-size: cover;
     min-height: 250px;
     border: none;
 }
@@ -263,12 +263,12 @@ h1, .lead, .p {
 
 /* ----------------------------------------- youtube div ---------------------------------- */
 
-.youtubeDiv {
+/* .youtubeDiv {
     /* background: url(../images/blue_gradient.jpg) no-repeat center;
     background-size: cover; */
     border: none;
     min-height: 250px;
-}
+} */
 
 .youtubeDiv h2 {
     font-family: 'Roboto', sans-serif;
