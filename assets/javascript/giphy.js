@@ -13,7 +13,7 @@ $(".dropdown-menu a").on("click", function () {
 
         var results = response.data[random];
         var feelingGif = $("<img>").addClass("gif");
-        feelingGif.attr("src", results.images.original.url);
+        feelingGif.attr("src", results.images.fixed_height.url);
 
         $(".gif").append(feelingGif);
     });

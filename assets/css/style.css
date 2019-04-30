@@ -139,6 +139,7 @@ h1, .lead, .p {
 .widget-right__header--brown {
     background-image: linear-gradient(to top left, rgb(216, 197, 92), white) !important;
 }
+
 .weather-right--brown {
     background-image: linear-gradient(to top right, white, rgb(216, 197, 92)) !important;
 }
@@ -208,6 +209,15 @@ h1, .lead, .p {
     font-size: 24px;
 }
 
+.quoteAll {
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
 .gifDiv {
     background: url(../images/pink_gradient.jpg) no-repeat center center;
     background-size: cover;
@@ -238,8 +248,8 @@ h1, .lead, .p {
     margin-right: auto;
 }
 
-
 /* ----------------------------------------- youtube div ---------------------------------- */
+
 .youtubeDiv {
     background: url(../images/blue_gradient.jpg) no-repeat center;
     background-size: cover;
@@ -255,6 +265,7 @@ h1, .lead, .p {
     padding-top: 20px;
     text-align: center;
 }
+
 /* ----------------------------------------- Chart Div ---------------------------------- */
 
 .chart-container {
@@ -272,6 +283,7 @@ h1, .lead, .p {
     #current-content {
         margin: 25px;
     }
+
 }
 
 @media only screen and (max-width: 728px) {
