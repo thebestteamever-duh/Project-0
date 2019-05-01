@@ -74,8 +74,8 @@ $(".dropdown-menu a").on("click", function() {
   // event.preventDefault();
 
   var topic = $(this).text();
-  console.log(this);
-  console.log("clicked");
+  // console.log(this);
+  // console.log("clicked");
 
   //Create an if Function to increment the chosen topic
   if (topic === "dumb") {
@@ -91,7 +91,7 @@ $(".dropdown-menu a").on("click", function() {
   } else if (topic === "happy") {
     happy++;
     console.log("happy", happy);
-    // changeCss("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
+    changeCss("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
     $(".contentDiv").css("background-image", "linear-gradient(#f9b749, #f47467)");
    
   }else if (topic === "Angry") {
@@ -172,7 +172,7 @@ var chart = new Chart(ctx, {
 database.ref().on(
   "value",
   function(snapshot) {
-      console.log("EMOTIONS", snapshot.val());
+      // console.log("EMOTIONS", snapshot.val());
     //**** */These variables will produce the number of clicks of each mood.****
     happy = snapshot.val().fHappy;
     sad = snapshot.val().fSad;
@@ -198,4 +198,4 @@ var testNumber = 20;
 
 
 // }
-console.log(chart.data.datasets.data);
+// console.log(chart.data.datasets.data);

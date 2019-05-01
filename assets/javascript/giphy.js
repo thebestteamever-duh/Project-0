@@ -1,5 +1,5 @@
 $(".dropdown-menu a").on("click", function () { 
- // var feeling = "happy"
+ 
  $(".gif").empty()
  var feeling = $(this).text();
  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + feeling + "&api_key=FHh9mWC90FyTtVYHXSy5uFhHubUvyLWb&limit=20";
