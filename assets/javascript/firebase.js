@@ -1,5 +1,5 @@
 //hide content until button is clicked
-$("#spotify").slideUp();
+$("#spotify").slideUp(1);
 
 // $("a").click(function(){
 //   $("#spotify").slideDown();
@@ -78,17 +78,17 @@ $(".dropdown-menu a").on("click", function() {
   // console.log("clicked");
 
   //Create an if Function to increment the chosen topic
-  if (topic === "dumb") {
-    // happy++;
-    // console.log("happy", happy);
-    // // changeCss("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
-    // // $(".contentDiv").css("background-image", "linear-gradient(#f9b749, #f47467)");
+  // if (topic === "dumb") {
+  //   // happy++;
+  //   // console.log("happy", happy);
+  //   // // changeCss("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
+  //   // // $(".contentDiv").css("background-image", "linear-gradient(#f9b749, #f47467)");
    
-  } else if (topic === "Sad") {
+   if (topic === "Sad") {
     sad++;
     $(".contentDiv").css("background-image", "linear-gradient(#6ecde3, #2a4755)");
     
-  } else if (topic === "happy") {
+  } else if (topic === "Happy") {
     happy++;
     console.log("happy", happy);
     changeCss("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
@@ -96,16 +96,17 @@ $(".dropdown-menu a").on("click", function() {
    
   }else if (topic === "Angry") {
     angry++;
-    changeCss("#fa8989", "#f64d52", "#a91834", "#840029", "#fddac3", "#832a2a")
+    $(".contentDiv").css("background", "linear-gradient(#8e54de, #6c32b4)");
   } else if (topic === "Scared") {
     scared++;
-    changeCss("#add2df", "#bdd2df", "#cdd2df", "#ddd2df", "#edd2df", "#f6b5d4")
+    $(".contentDiv").css("background", "linear-gradient(#8e54de, #6c32b4)");
   } else if (topic === "Tired") {
     tired++;
     $(".contentDiv").css("background", "linear-gradient(#8e54de, #6c32b4)");
 
   } else {
     love++;
+    $(".contentDiv").css("background", "linear-gradient(#8e54de, #6c32b4)");
   }
   //pass the updated clicks to firebase
   database.ref().set({

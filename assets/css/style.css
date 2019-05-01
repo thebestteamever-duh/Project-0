@@ -32,7 +32,7 @@ body {
 .logo-image {
     height: auto;
     width: auto;
-    max-width: 200px;
+    max-width: 130px;
     max-height: 110px;
 }
 
@@ -45,6 +45,30 @@ body {
     background-color: linen;
 }
 
+svg{
+    background-color: #f37168;
+    border-radius: 300px;
+    height: 100px;
+    width: 100px;
+    
+}
+path {
+    stroke-dasharray: 900;
+    animation: draw 2s;
+    }
+
+    @keyframes draw {
+    from {
+        stroke-dashoffset: -900;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+.animate-logo {
+   display: flex;
+   align-items: center;
+}
 /* -------------------------- jumbotron ------------------------------ */
 
 .jumbotron {
@@ -132,9 +156,10 @@ h1, .lead, .p {
     background-color: rgb(138, 102, 138);
     min-height: 250px;
     text-align: center;
+    border: 10px solid #fff;
 }
 
-.spotifyDiv h2 {
+.contentDiv h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400 !important;
     color: white;
@@ -161,11 +186,8 @@ h1, .lead, .p {
     background-image: linear-gradient(to bottom, white), rgb(216, 204, 145) !important;
 }
 
-/* .weatherDiv {
-    /* background: url(../images/blue_gradient.jpg) no-repeat center;
-    background-size: cover; */
-    border: none;
-} */
+
+
 
 .weatherDiv h2 {
     font-family: 'Roboto', sans-serif;
