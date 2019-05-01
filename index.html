@@ -24,23 +24,28 @@
 
 <body>
     <div class="col-12 logo-bar">
-            <div class="animate-logo">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 288 288" style="enable-background:new 0 0 288 288;" xml:space="preserve">
+        <div class="animate-logo">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 288 288"
+                style="enable-background:new 0 0 288 288;" xml:space="preserve">
                 <style type="text/css">
-                    .st0{fill:none;stroke:#FFFFFF;stroke-width:11;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                    .st0 {
+                        fill: none;
+                        stroke: #FFFFFF;
+                        stroke-width: 11;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-miterlimit: 10;
+                    }
                 </style>
-                <path class="st0" d="M275.9,136.6c0,0-63.5,56.4-91.7,51.7s-2.2-40.9-14.4-49.7c-13.5-9.7-45,48.2-65.6,43.5
-                    c-16-3.7,24.4-57.9,2.9-66.1c-15.4-5.9-55,85-55,85c18.2-32.3,28.4-80,21.8-94.1c-6-12.9-20.7-25.5-61.2-17.9"/>
-                </svg>
-                
-                <img
-                src="../assets/images/Asset 1@2x.png"
-                class="logo-image"
-                alt="mindset-logo"
-                />
-            </div>
-            </div>
+                <path class="st0"
+                    d="M275.9,136.6c0,0-63.5,56.4-91.7,51.7s-2.2-40.9-14.4-49.7c-13.5-9.7-45,48.2-65.6,43.5
+                    c-16-3.7,24.4-57.9,2.9-66.1c-15.4-5.9-55,85-55,85c18.2-32.3,28.4-80,21.8-94.1c-6-12.9-20.7-25.5-61.2-17.9" />
+            </svg>
+
+            <img src="../assets/images/Asset 1@2x.png" class="logo-image" alt="mindset-logo" />
+        </div>
+    </div>
     <hr class="header-bar">
     <div class="jumbotron row">
         <div class="headline col-6">
@@ -50,12 +55,12 @@
         </div>
         <div class="mobile">
             <h1 class="headline-mobile">Choose Your Mood</h1>
-        
+
         </div>
         <!-- <p class="lead">Start your day right with this app!</p>
         <hr class="my-4">
         <p class="p">Select your mood and let the app start your day!</p> -->
-       <div class="mood-list col-6">
+        <div class="mood-list col-6">
             <div class="dropright">
                 <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -70,14 +75,14 @@
                     <a id="mood" class="dropdown-item" href="#" value="Love">Love</a>
                 </div>
             </div>
-       </div>
+        </div>
     </div>
 
     <br><br>
 
     <div id="spotify">
         <div class="row">
-            <div class="contentDiv col-md-8" id = "divSpotify">
+            <div class="contentDiv col-md-8" id="divSpotify">
                 <h2> This morning's Playlist</h2>
                 <hr class="my-4">
                 <iframe id="player" src="" width="600" height="280" frameborder="0" allowtransparency="true"
@@ -85,8 +90,8 @@
                 <br>
                 <br>
             </div>
-            
-            <div class="contentDiv col-md-4" id = "divWeather">
+
+            <div class="contentDiv col-md-4" id="divWeather">
                 <h2>Today's Weather</h2>
                 <hr class="my-4">
                 <div class="weather-info">
@@ -116,7 +121,7 @@
 
         <div class="row">
 
-            <div class="contentDiv col-md-6" id = "divQuote">
+            <div class="contentDiv col-md-6" id="divQuote">
                 <h2>Today's Quote</h2>
                 <hr class="my-4">
                 <div class="quoteAll">
@@ -125,7 +130,7 @@
                 </div>
             </div>
 
-            <div class="contentDiv col-md-6" id = "divGif">
+            <div class="contentDiv col-md-6" id="divGif">
                 <h2>Gif goes here</h2>
                 <hr class="my-4">
                 <div class="gif"></div>
@@ -133,7 +138,7 @@
         </div>
 
         <div class="row">
-            <div class="contentDiv col-6" id ="divMindset">
+            <div class="contentDiv col-6" id="divMindset">
                 <h2>The World's Mindset</h2>
                 <hr class="my-4" />
                 <div class="chart-container" style="position: relative; height:250px; width: 500px">
@@ -142,10 +147,89 @@
             </div>
 
 
-            <div class="contentDiv col-md-6" id = "divYoutube">
+            <div class="contentDiv col-md-6" id="divYoutube">
                 <h2>Youtube Will Go Here</h2>
                 <hr class="my-4">
-                <div class="video"></div>
+                <div id="player"></div>
+                <!-- <script src="https://apis.google.com/js/api.js"></script>
+                <script>
+                    /**
+                     * Sample JavaScript code for youtube.search.list
+                     * See instructions for running APIs Explorer code samples locally:
+                     * https://developers.google.com/explorer-help/guides/code_samples#javascript
+                     */
+
+                    function loadClient() {
+                        gapi.client.setApiKey("AIzaSyCX8RJZ9iqGiukvsMVUFODyEFmx5W4bM2I");
+                        return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+                            .then(function () { console.log("GAPI client loaded for API"); },
+                                function (err) { console.error("Error loading GAPI client for API", err); });
+                    }
+                    // Make sure the client is loaded before calling this method.
+                    function execute() {
+                        return gapi.client.youtube.search.list({
+                            "part": "snippet",
+                            "maxResults": 2,
+                            "q": "angry yoga",
+                            "topicId": "yoga"
+                        })
+                            .then(function (response) {
+                                // Handle the results here (response.result has the parsed body).
+                                console.log("Response", response);
+                                console.log("videoId " + response.result.items[0].id.videoId);
+
+                                var videoId = response.result.items[0].id.videoId;
+                                var tag = document.createElement('script');
+
+                                tag.id = 'iframe-demo';
+                                tag.src = "http://www.youtube.com/iframe_api";
+                                var firstScriptTag = document.getElementsByTagName('script')[0];
+                                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                                player = new YT.Player('player', {
+                                    height: '390',
+                                    width: '640',
+                                    videoId: videoId,
+                                    events: {
+                                        'onReady': onPlayerReady,
+                                        'onStateChange': onPlayerStateChange
+                                    }
+                                });
+                                function onPlayerReady(event) {
+                                      document.getElementById('player').style.borderColor = '#FF6D00';
+                                    }
+                                    function changeBorderColor(playerStatus) {
+                                      var color;
+                                      if (playerStatus == -1) {
+                                        color = "#37474F"; // unstarted = gray
+                                      } else if (playerStatus == 0) {
+                                        color = "#FFFF00"; // ended = yellow
+                                      } else if (playerStatus == 1) {
+                                        color = "#33691E"; // playing = green
+                                      } else if (playerStatus == 2) {
+                                        color = "#DD2C00"; // paused = red
+                                      } else if (playerStatus == 3) {
+                                        color = "#AA00FF"; // buffering = purple
+                                      } else if (playerStatus == 5) {
+                                        color = "#FF6DOO"; // video cued = orange
+                                      }
+                                      if (color) {
+                                        document.getElementById('player').style.borderColor = color;
+                                      }
+                                    };
+                                    function onPlayerStateChange(event) {
+                                      changeBorderColor(event.data);
+                                    };
+                                },
+                                function (err) { console.error("Execute error", err); });
+                    }
+                    gapi.load("client");
+
+
+                </script>
+                <button onclick="loadClient()">load</button>
+                <button onclick="execute()">execute</button> -->
+
             </div>
         </div>
 
@@ -190,6 +274,7 @@
     <!-- <script src="assets/javascript/firebase.js"></script> -->
 
     <script src="assets/youtube.js"></script>
+    <!-- <script src="https://apis.google.com/js/api.js"></script> -->
 
     <!-- ---------------------Moment.js-------------------------- -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>

@@ -90,8 +90,8 @@ $(".dropdown-menu a").on("click", function() {
     
   } else if (topic === "Happy") {
     happy++;
-    console.log("happy", happy);
-    changeCss("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
+    // console.log("happy", happy);
+    // changeCss("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
     $(".contentDiv").css("background-image", "linear-gradient(#f9b749, #f47467)");
    
   }else if (topic === "Angry") {

@@ -12,7 +12,8 @@ var player;
 function onYouTubeIframeAPIReady() {
   $(".dropdown-menu a").on("click", function () {
     var feeling = $(this).text();
-    console.log("FEELING " + feeling);
+    console.log(feeling);
+  })};
 
     // var happy = ["j8KXHMX32gU", "oa6cHEJIjYI"]
     // var sad = ["QTc0gPyfpCg", "dS7W2OhzMiE"]
@@ -22,7 +23,7 @@ function onYouTubeIframeAPIReady() {
     // var love = ["rbNo2PRiExw", "mxbow_aKoAM"]
 
 
-    if (feeling = "happy") {
+    if (feeling == "Happy") {
       videos = ["j8KXHMX32gU", "oa6cHEJIjYI"]
       var random = Math.floor(Math.random() * 5);
       for (var i = 0; i < videos.length; i++) {
@@ -30,13 +31,33 @@ function onYouTubeIframeAPIReady() {
       }
       player = new YT.Player('player', {
         height: '390',
-        width: '640',
+        width: '640', 
         videoId: videoId,
         events: {
           'onReady': onPlayerReady,
           'onStateChange': onPlayerStateChange
-        }
-      });
+        }});
+      
+    //   console.log("This is happy");
+    //   // $("#divYoutube").append(feeling);
+    //     }
+    // else if(feeling == "Sad") {
+    //     console.log("This is sad");
+    //   }
+    // else if (feeling == "Angry") {
+    //     console.log("This is angry");
+    //   }
+    //   else if (feeling == "Scared") {
+    //     console.log("This is scared");
+    //   }
+    //   else if (feeling == "Tired") {
+    //     console.log("This is angry");
+    //   }
+    //   else {
+    //     console.log("Ugh");
+    //   };
+    // })
+// };
     }
     else if (feeling = "sad") {
       var videos = ["QTc0gPyfpCg", "dS7W2OhzMiE"];
@@ -118,7 +139,7 @@ function onYouTubeIframeAPIReady() {
     //     }
     //   });
     // };
-  })};
+  // })};
 
 
 
