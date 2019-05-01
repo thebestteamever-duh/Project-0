@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+   
+ <style>
+            svg{
+                background-color: #f37168;
+                border-radius: 300px;
+                height: 100px;
+                width: 100px;
+                
+            }
+            path {
+                stroke-dasharray: 900;
+                animation: draw 2s;
+                }
+    
+                @keyframes draw {
+                from {
+                    stroke-dashoffset: -900;
+                }
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+           .animate-logo {
+               display: flex;
+               align-items: center;
+           }
+        
+ </style>
+
+  </head>
+  <body>
+    <div class="col-12 logo-bar">
+      <div class="animate-logo">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 288 288" style="enable-background:new 0 0 288 288;" xml:space="preserve">
+       <style type="text/css">
+           .st0{fill:none;stroke:#FFFFFF;stroke-width:11;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+       </style>
+       <path class="st0" d="M275.9,136.6c0,0-63.5,56.4-91.7,51.7s-2.2-40.9-14.4-49.7c-13.5-9.7-45,48.2-65.6,43.5
+           c-16-3.7,24.4-57.9,2.9-66.1c-15.4-5.9-55,85-55,85c18.2-32.3,28.4-80,21.8-94.1c-6-12.9-20.7-25.5-61.2-17.9"/>
+       </svg>
+       
+        <img
+          src="../assets/images/Asset 1@2x.png"
+          class="logo-image"
+          alt="mindset-logo"
+        />
+      </div>
+    </div>
+  </body>
+</html>
