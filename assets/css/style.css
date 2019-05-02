@@ -5,21 +5,11 @@ body {
     margin: 0 auto;
     overflow-x: hidden;
 }
+
 .row {
     justify-content: center!important;
 }
-/* .col-md-8 {
-    max-width: 60%!important;
-    margin: 10px!important;
-}
-.col-md-4 {
-    max-width: 40%!important;
-    margin: 10px!important;
-}
-.col-md-6 {
-    max-width: 50%!important;
-    margin: 10px!important;
-} */
+
 /* ------------------ header ----------------- */
 
 .logo-bar {
@@ -45,19 +35,19 @@ body {
     background-color: linen;
 }
 
-svg{
+svg {
     background-color: #f37168;
     border-radius: 300px;
     height: 100px;
     width: 100px;
-    
 }
+
 path {
     stroke-dasharray: 900;
     animation: draw 2s;
-    }
+}
 
-    @keyframes draw {
+@keyframes draw {
     from {
         stroke-dashoffset: -900;
     }
@@ -65,10 +55,12 @@ path {
         stroke-dashoffset: 0;
     }
 }
+
 .animate-logo {
-   display: flex;
-   align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 /* -------------------------- jumbotron ------------------------------ */
 
 .jumbotron {
@@ -97,6 +89,7 @@ h1, .lead, .p {
 .headline-mobile {
     display: none;
 }
+
 .display-4 {
     font-family: 'Rubik', sans-serif;
     font-weight: 900;
@@ -130,8 +123,6 @@ h1, .lead, .p {
 }
 
 .btn {
-    /* border: 2px solid #1b3a47 !important;
-    color: #1b3a47 !important; */
     border: none!important;
     min-width: 50% !important;
     background: linear-gradient(#ff772d, #f5905a);
@@ -147,16 +138,18 @@ h1, .lead, .p {
     border: none!important;
     color: #ffffff;
 }
+
 .dropdown-menu a:hover {
     color: #ff772d!important;
 }
 
 /* -------------------------------------- spotify div --------------------------------- */
+
 #player {
     box-shadow: 0px 1px 20px #ffffff;
 }
+
 .contentDiv {
-    /* background: url(../images/pink_gradient.jpg) no-repeat center; */
     background-size: cover;
     background-color: rgb(138, 102, 138);
     min-height: 250px;
@@ -174,6 +167,7 @@ h1, .lead, .p {
 }
 
 /* ----------------------------------------- weather div ---------------------------------- */
+
 #openweathermap-widget-15 {
     box-shadow: 0px 1px 20px #ffffff;
     margin-top: 15px;
@@ -195,9 +189,6 @@ h1, .lead, .p {
     background-image: linear-gradient(to bottom, white), rgb(216, 204, 145) !important;
 }
 
-
-
-
 .weatherDiv h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400 !important;
@@ -215,18 +206,9 @@ h1, .lead, .p {
     align-items: center;
 }
 
+/* ----------------------------------------- quote and GIF divs ---------------------------------- */
 
-/* ----------------------------------------- quote and horoscope divs ---------------------------------- */
-
-/* .quoteDiv {
-    /* background: url(../images/blue_gradient.jpg) no-repeat center center;
-    background-size: cover; */
-    /* border: none;
-    min-height: 250px;
-    padding: 15px;
-} */ */
-
-.quoteDiv h2 {
+*/ .quoteDiv h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400 !important;
     color: white;
@@ -234,10 +216,6 @@ h1, .lead, .p {
     font-size: 40px;
     text-align: center;
 }
-
-/* .quoteText h1 {
-    text-align: center;
-} */
 
 .quoteAuthor h3 {
     font-family: 'Roboto', sans-serif;
@@ -272,7 +250,6 @@ h1, .lead, .p {
 }
 
 .gifDiv {
-    /* background: url(../images/pink_gradient.jpg) no-repeat center center; */
     background-size: cover;
     min-height: 250px;
     border: none;
@@ -303,13 +280,6 @@ h1, .lead, .p {
 
 /* ----------------------------------------- youtube div ---------------------------------- */
 
-/* .youtubeDiv {
-    background: url(../images/blue_gradient.jpg) no-repeat center;
-    background-size: cover;
-    border: none;
-    min-height: 250px;
-}  */
-
 .youtubeDiv h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400 !important;
@@ -335,31 +305,25 @@ h1, .lead, .p {
     min-height: 20vh!important;
 }
 
-
-
 /* ----------------------------------------- media queries ---------------------------------- */
 
 @media only screen and (max-width: 400px) {
     #current-content {
         margin: 25px;
     }
-
 }
-
 
 @media only screen and (max-width: 728px) {
     .row {
         margin-left: 0px!important;
         margin-right: 0px!important;
     }
-
     .jumbotron {
         display: inline-block!important;
         width: 100%!important;
         margin: 0 auto;
         height: auto;
     }
-  
     .mobile {
         width: 100%;
         margin: 0 auto;
@@ -375,19 +339,13 @@ h1, .lead, .p {
         font-size: 40px!important;
         margin: 0 auto;
     }
-
     .display-4 {
         display: none;
     }
-
-
     .contentDiv {
         width: 100%;
     }
-
     .mood-list {
         margin: 0 auto;
     }
-
 }
-
