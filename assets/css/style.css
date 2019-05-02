@@ -307,11 +307,17 @@ h1, .lead, .p {
 .chart-container {
     margin: 0 auto;
     padding-bottom: 20px;
+    min-width: 30vw;
+    min-height: 20vh;
 }
 
 #myChart {
     padding-bottom: 20px;
+    min-width: 30vw!important;
+    min-height: 20vh!important;
 }
+
+
 
 /* ----------------------------------------- media queries ---------------------------------- */
 
@@ -356,8 +362,14 @@ h1, .lead, .p {
         display: none;
     }
 
+
+    .contentDiv {
+        width: 100%;
+    }
+
     .mood-list {
         margin: 0 auto;
     }
+
 }
 
