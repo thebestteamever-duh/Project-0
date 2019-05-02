@@ -10,6 +10,9 @@ body {
     justify-content: center!important;
 }
 
+#spotify {
+    margin-top: -40px;
+}
 /* ------------------ header ----------------- */
 
 .logo-bar {
@@ -17,13 +20,15 @@ body {
     flex-direction: row;
     justify-content: center;
     background-color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .logo-image {
     height: auto;
     width: auto;
-    max-width: 130px;
-    max-height: 110px;
+    max-width: 110px;
+    max-height: 80px;
 }
 
 .header-bar {
@@ -38,8 +43,9 @@ body {
 svg {
     background-color: #f37168;
     border-radius: 300px;
-    height: 100px;
-    width: 100px;
+    height: 75px;
+    width: 75px;
+    
 }
 
 path {
@@ -61,6 +67,9 @@ path {
     align-items: center;
 }
 
+.row1-mobile {
+    display: none;
+}
 /* -------------------------- jumbotron ------------------------------ */
 
 .jumbotron {
@@ -73,6 +82,7 @@ path {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0px!important;
 }
 
 h1, .lead, .p {
@@ -127,6 +137,8 @@ h1, .lead, .p {
     min-width: 50% !important;
     background: linear-gradient(#ff772d, #f5905a);
     box-shadow: 0px 0px 5px #00000000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400 !important;
 }
 
 .dropdown-menu {
@@ -137,6 +149,8 @@ h1, .lead, .p {
     font-size: 17px;
     border: none!important;
     color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400 !important;
 }
 
 .dropdown-menu a:hover {
@@ -247,6 +261,7 @@ h1, .lead, .p {
 .gif img {
     margin-top: 10px;
     box-shadow: 0px 1px 20px #ffffff;
+    margin-bottom: 40px;
 }
 
 .gifDiv {
@@ -306,10 +321,21 @@ h1, .lead, .p {
 }
 
 /* ----------------------------------------- media queries ---------------------------------- */
+@media only screen and (max-width: 1020px) {
+    iframe {
+        width: 450px;
+    }
+}
 
-@media only screen and (max-width: 400px) {
-    #current-content {
-        margin: 25px;
+@media only screen and (max-width: 960px) {
+    iframe {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    iframe {
+        width: 350px;
     }
 }
 
@@ -348,4 +374,27 @@ h1, .lead, .p {
     .mood-list {
         margin: 0 auto;
     }
+
+    iframe {
+        width: 500px;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+    iframe {
+        width: 400px;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    #current-content {
+        margin: 25px;
+    }
+
+    iframe {
+        width: 300px;
+    }
+
 }
