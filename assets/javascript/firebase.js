@@ -1,52 +1,6 @@
 //hide content until button is clicked
 $("#spotify").slideUp(1);
 
-// $("a").click(function(){
-//   $("#spotify").slideDown();
-// });
-
-//base function for changing css - then call this function below in the if, if else to trigger based on choice
-// changeCss("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
-// function changeCss(yellow, pink, quote, gif, mindset, youtube) {
-//   $("#divSpotify").css({
-//     "background": "linear-gradient("yellow "," pink")",
-//    });
-//   //  #f9b749
-//   // #f47467
-//    $("#divWeather").css({
-//     "background": "",
-//     "background": weather,
-//    });
-//    $("#divQuote").css({
-//     "background": "",
-//     "background-color": quote,
-//    });
-//    $("#divGif").css({
-//     "background": "",
-//     "background-color": gif,
-//    });
-//    $("#divMindset").css({
-//     "background": "",
-//     "background-color": mindset,
-//    });
-//    $("#divYoutube").css({
-//     "background": "",
-//     "background-color": youtube,
-//    });
-
-
-//  Happy("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
-// Sad "#1d1e1f", "#282b2e", "#35393d", "#3e4954",	"#455566", "#5f6d9f"
-// Angry "#fa8989", "#f64d52", "#a91834", "#840029", "#fddac3", "#832a2a"
-// Scared "#add2df", "#bdd2df", "#cdd2df", "#ddd2df", "#edd2df", #f6b5d4
-// }
-// Capri (#01BEFE), 
-// Golden Yellow (#FFDD00)
-// Amber (#FF7D00), 
-// Vivid Raspberry (#FF006D)
-// Spring Bud (#ADFF02)
-// Electric Violet (#8F00FF).
-// Initialize Firebase
 var config = {
   apiKey: "AIzaSyA9II18kgiRBsKko3xJVcsQ5ai9PsNJtMY",
   authDomain: "mindset-c4818.firebaseapp.com",
@@ -71,18 +25,7 @@ $(".dropdown-menu a").on("click", function () {
 
   $("#spotify").slideDown();
 
-  // event.preventDefault();
-
   var topic = $(this).text();
-  // console.log(this);
-  // console.log("clicked");
-
-  //Create an if Function to increment the chosen topic
-  // if (topic === "dumb") {
-  //   // happy++;
-  //   // console.log("happy", happy);
-  //   // // changeCss("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
-  //   // // $(".contentDiv").css("background-image", "linear-gradient(#f9b749, #f47467)");
 
   if (topic === "Sad") {
     sad++;
@@ -121,6 +64,7 @@ $(".dropdown-menu a").on("click", function () {
 Chart.defaults.global.defaultFontFamily = "Roboto";
 var ctx = document.getElementById("myChart").getContext("2d");
 var chart = new Chart(ctx, {
+
   // The type of chart we want to create
   type: "bar",
 
@@ -159,9 +103,9 @@ var chart = new Chart(ctx, {
 
     legend: {
       labels: {
-           fontColor: 'white'
-          }
-       },
+        fontColor: 'white'
+      }
+    },
     scales: {
       yAxes: [
         {
@@ -173,9 +117,9 @@ var chart = new Chart(ctx, {
       ],
       xAxes: [{
         ticks: {
-            fontColor: 'white'
+          fontColor: 'white'
         },
-    }]
+      }]
     }
   }
 });
@@ -209,5 +153,3 @@ database.ref().on(
 var testNumber = 20;
 
 
-// }
-// console.log(chart.data.datasets.data);

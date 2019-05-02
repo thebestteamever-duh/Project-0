@@ -307,6 +307,7 @@ h1, .lead, .p {
 
 #divYoutube iframe {
     margin-bottom: 20px;
+    box-shadow: 0px 1px 20px #ffffff;
 }
 
 /* ----------------------------------------- Chart Div ---------------------------------- */
@@ -322,7 +323,7 @@ h1, .lead, .p {
     padding-bottom: 20px;
     min-width: 30vw!important;
     min-height: 20vh!important;
-    margin-top: 45px !important;
+    margin-top: 70px !important;
 }
 
 /* ----------------------------------------- footer ---------------------------------- */
