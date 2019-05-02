@@ -4,6 +4,7 @@ body {
     width: 100%;
     margin: 0 auto;
     overflow-x: hidden;
+    /* margin-bottom: 40px!important; */
 }
 
 .row {
@@ -12,6 +13,10 @@ body {
 
 #spotify {
     margin-top: -40px;
+}
+
+.margin-row {
+    margin-bottom: 40px;
 }
 /* ------------------ header ----------------- */
 
@@ -70,6 +75,7 @@ path {
 .row1-mobile {
     display: none;
 }
+
 /* -------------------------- jumbotron ------------------------------ */
 
 .jumbotron {
