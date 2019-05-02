@@ -1,5 +1,8 @@
 $("#spotify").slideUp(1);
-/* ----------------------------------------- Base Variabes ---------------------------------- */
+/* ----------------------------------------- Base varible to store and distribute Mood Chosen ---------------------------------- */
+var topic = "";
+
+/* ----------------------------------------- FireBase ---------------------------------- */
 var topic = "";
 var config = {
     apiKey: "AIzaSyA9II18kgiRBsKko3xJVcsQ5ai9PsNJtMY",
@@ -31,7 +34,8 @@ var config = {
     topic = $(this).text();
 /* ----------------------------------------- LOADER FUNCTION CONTAINS ALL FUNCTIONS---------------------------------- */
    loader()
-  
+/* -----Programatically update variable for firebase and allow for change of colors on Mood Chosen ----------------- */
+var topic = "";
     if (topic === "Sad") {
       sad++;
       $(".contentDiv").css("background-image", "linear-gradient(#4c4c4c, #345467)");
@@ -65,7 +69,8 @@ var config = {
     });
   });
   
-  //Draw Chart
+  /* ----------------------------------------- Code for chart.js library usage---------------------------------- */
+var topic = "";
   Chart.defaults.global.defaultFontFamily = "Roboto";
   var ctx = document.getElementById("myChart").getContext("2d");
   var chart = new Chart(ctx, {
@@ -152,6 +157,7 @@ var config = {
       console.log("The read failed: " + errorObject.code);
     }
   );
+// --------------------------------- Function Loader to Call onClick jQuery Trigger ---------------------------
 function loader () {
 spotify()
 gif()
@@ -302,4 +308,5 @@ function execute() {
         }); }
    
 }
+// --------------------------------- Required for Youtube GAPI ---------------------------
 gapi.load("client");
