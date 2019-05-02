@@ -339,7 +339,29 @@ h1, .lead, .p {
     min-height: 20vh!important;
 }
 
+/* ----------------------------------------- Footer ---------------------------------- */
 
+.footer {
+    background-color: #f37168;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    align-content: center;
+
+}
+
+.footer img {
+    max-height: 50px;
+    padding-left: 10px;
+}
+
+.footer p {
+    padding-top: 15px;
+    padding-right: 10px;
+}
 
 /* ----------------------------------------- media queries ---------------------------------- */
 @media only screen and (max-width: 1020px) {
