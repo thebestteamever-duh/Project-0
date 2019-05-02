@@ -184,7 +184,7 @@ h1, .lead, .p {
 
 #openweathermap-widget-15 {
     box-shadow: 0px 1px 20px #ffffff;
-    margin-top: 15px;
+    margin-top: 17px;
 }
 
 .widget-right__title {
@@ -261,7 +261,7 @@ h1, .lead, .p {
 .gif img {
     margin-top: 10px;
     box-shadow: 0px 1px 20px #ffffff;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
 }
 
 .gifDiv {
@@ -305,6 +305,10 @@ h1, .lead, .p {
     text-align: center;
 }
 
+#divYoutube iframe {
+    margin-bottom: 20px;
+}
+
 /* ----------------------------------------- Chart Div ---------------------------------- */
 
 .chart-container {
@@ -318,6 +322,7 @@ h1, .lead, .p {
     padding-bottom: 20px;
     min-width: 30vw!important;
     min-height: 20vh!important;
+    margin-top: 45px !important;
 }
 
 /* ----------------------------------------- media queries ---------------------------------- */
