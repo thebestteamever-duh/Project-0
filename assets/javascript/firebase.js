@@ -147,6 +147,7 @@ var chart = new Chart(ctx, {
   // Configuration options go here
   options: {
     responsive: true,
+    maintainAspectRatio: false,
     layout: {
       padding: {
         left: 0,
@@ -155,14 +156,26 @@ var chart = new Chart(ctx, {
         bottom: 0
       }
     },
+
+    legend: {
+      labels: {
+           fontColor: 'white'
+          }
+       },
     scales: {
       yAxes: [
         {
           ticks: {
-            beginAtZero: true
+            beginAtZero: true,
+            fontColor: 'white'
           }
         }
-      ]
+      ],
+      xAxes: [{
+        ticks: {
+            fontColor: 'white'
+        },
+    }]
     }
   }
 });
