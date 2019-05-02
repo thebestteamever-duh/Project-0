@@ -138,9 +138,12 @@ h1, .lead, .p {
     box-shadow: 0px 0px 5px #00000000;
 }
 
+.dropdown-menu {
+    background: linear-gradient(#502049, #b61084);
+}
+
 .dropdown-menu a {
     font-size: 17px;
-    background: linear-gradient(#fcc435, #ffc83e);
     border: none!important;
     color: #ffffff;
 }
