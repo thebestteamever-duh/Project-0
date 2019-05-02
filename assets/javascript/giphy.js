@@ -16,5 +16,6 @@ $(".dropdown-menu a").on("click", function () {
         feelingGif.attr("src", results.images.fixed_height.url);
 
         $(".gif").append(feelingGif);
+        console.log(response);
     });
 });

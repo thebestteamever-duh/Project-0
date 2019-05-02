@@ -15,7 +15,7 @@
     headers: {"X-RapidAPI-Host": "quotable-quotes.p.rapidapi.com", "X-RapidAPI-Key": "6f84e5eceamsh5c5d979bf355c11p1f651ajsneb75d52cb90c"}
     }).then(function(response) {
         
-    var quote = $("<p>").text(response.quote);
+    var quote = $("<h1>").text(response.quote);
     var author = $("<h3>").text("– " + response.author)
 
     $(".quoteText").prepend(quote);

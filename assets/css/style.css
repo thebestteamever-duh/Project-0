@@ -149,7 +149,9 @@ h1, .lead, .p {
 }
 
 /* -------------------------------------- spotify div --------------------------------- */
-
+#player {
+    box-shadow: 0px 1px 20px #ffffff;
+}
 .contentDiv {
     /* background: url(../images/pink_gradient.jpg) no-repeat center; */
     background-size: cover;
@@ -169,6 +171,9 @@ h1, .lead, .p {
 }
 
 /* ----------------------------------------- weather div ---------------------------------- */
+#openweathermap-widget-15 {
+    box-shadow: 0px 1px 20px #ffffff;
+}
 
 .widget-right__title {
     font-size: 40px !important;
@@ -212,10 +217,10 @@ h1, .lead, .p {
 /* .quoteDiv {
     /* background: url(../images/blue_gradient.jpg) no-repeat center center;
     background-size: cover; */
-    border: none;
+    /* border: none;
     min-height: 250px;
     padding: 15px;
-} */
+} */ */
 
 .quoteDiv h2 {
     font-family: 'Roboto', sans-serif;
@@ -226,6 +231,10 @@ h1, .lead, .p {
     text-align: center;
 }
 
+/* .quoteText h1 {
+    text-align: center;
+} */
+
 .quoteAuthor h3 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400 !important;
@@ -235,13 +244,13 @@ h1, .lead, .p {
     font-size: 20px;
 }
 
-.quoteDiv p {
+.quoteText h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400 !important;
     color: white;
-    text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
+    text-shadow: 0px 1px 10px rgba(0, 0, 0, .9);
     text-align: center;
-    font-size: 24px;
+    font-size: 29px;
 }
 
 .quoteAll {
@@ -251,6 +260,11 @@ h1, .lead, .p {
     justify-content: center;
     flex-direction: column;
     margin-bottom: 10px;
+}
+
+.gif img {
+    margin-top: 10px;
+    box-shadow: 0px 1px 20px #ffffff;
 }
 
 .gifDiv {
@@ -286,11 +300,11 @@ h1, .lead, .p {
 /* ----------------------------------------- youtube div ---------------------------------- */
 
 /* .youtubeDiv {
-    /* background: url(../images/blue_gradient.jpg) no-repeat center;
-    background-size: cover; */
+    background: url(../images/blue_gradient.jpg) no-repeat center;
+    background-size: cover;
     border: none;
     min-height: 250px;
-} */
+}  */
 
 .youtubeDiv h2 {
     font-family: 'Roboto', sans-serif;

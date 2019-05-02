@@ -35,17 +35,17 @@ $("#spotify").slideUp(1);
 //    });
 
 
-  //  Happy("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
-  // Sad "#1d1e1f", "#282b2e", "#35393d", "#3e4954",	"#455566", "#5f6d9f"
-  // Angry "#fa8989", "#f64d52", "#a91834", "#840029", "#fddac3", "#832a2a"
+//  Happy("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
+// Sad "#1d1e1f", "#282b2e", "#35393d", "#3e4954",	"#455566", "#5f6d9f"
+// Angry "#fa8989", "#f64d52", "#a91834", "#840029", "#fddac3", "#832a2a"
 // Scared "#add2df", "#bdd2df", "#cdd2df", "#ddd2df", "#edd2df", #f6b5d4
-  // }
-  // Capri (#01BEFE), 
-  // Golden Yellow (#FFDD00)
-  // Amber (#FF7D00), 
-  // Vivid Raspberry (#FF006D)
-  // Spring Bud (#ADFF02)
-  // Electric Violet (#8F00FF).
+// }
+// Capri (#01BEFE), 
+// Golden Yellow (#FFDD00)
+// Amber (#FF7D00), 
+// Vivid Raspberry (#FF006D)
+// Spring Bud (#ADFF02)
+// Electric Violet (#8F00FF).
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyA9II18kgiRBsKko3xJVcsQ5ai9PsNJtMY",
@@ -67,7 +67,7 @@ var scared = 0;
 var tired = 0;
 var love = 0;
 
-$(".dropdown-menu a").on("click", function() {
+$(".dropdown-menu a").on("click", function () {
 
   $("#spotify").slideDown();
 
@@ -83,30 +83,28 @@ $(".dropdown-menu a").on("click", function() {
   //   // console.log("happy", happy);
   //   // // changeCss("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
   //   // // $(".contentDiv").css("background-image", "linear-gradient(#f9b749, #f47467)");
-   
-   if (topic === "Sad") {
+
+  if (topic === "Sad") {
     sad++;
-    $(".contentDiv").css("background-image", "linear-gradient(#6ecde3, #2a4755)");
-    
+    $(".contentDiv").css("background-image", "linear-gradient(#4c4c4c, #345467)");
+
   } else if (topic === "Happy") {
     happy++;
-    // console.log("happy", happy);
-    // changeCss("#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF")
-    $(".contentDiv").css("background-image", "linear-gradient(#f9b749, #f47467)");
-   
-  }else if (topic === "Angry") {
+    $(".contentDiv").css("background-image", "linear-gradient(#FFDD00, #01BEFE)");
+  } else if (topic === "Angry") {
+    console.log("Angry");
     angry++;
-    $(".contentDiv").css("background", "linear-gradient(#8e54de, #6c32b4)");
+    $(".contentDiv").css("background-image", "linear-gradient(#f03e3e, #471c1c)");
   } else if (topic === "Scared") {
     scared++;
-    $(".contentDiv").css("background", "linear-gradient(#8e54de, #6c32b4)");
+    $(".contentDiv").css("background-image", "linear-gradient(#3f1a49, #36492e)");
   } else if (topic === "Tired") {
     tired++;
-    $(".contentDiv").css("background", "linear-gradient(#8e54de, #6c32b4)");
+    $(".contentDiv").css("background-image", "linear-gradient(#4a4e69, #c9ada7)");
 
   } else {
     love++;
-    $(".contentDiv").css("background", "linear-gradient(#8e54de, #6c32b4)");
+    $(".contentDiv").css("background-image", "linear-gradient(#ff4770, #ffbbca)");
   }
   //pass the updated clicks to firebase
   database.ref().set({
@@ -141,7 +139,7 @@ var chart = new Chart(ctx, {
           "#fb6262"
         ],
         borderColor: "rgb(255, 99, 132)",
-        data: [0,0,0,0,0,0]
+        data: [0, 0, 0, 0, 0, 0]
       }
     ]
   },
@@ -172,8 +170,8 @@ var chart = new Chart(ctx, {
 //Pull database information out of Firebase
 database.ref().on(
   "value",
-  function(snapshot) {
-      // console.log("EMOTIONS", snapshot.val());
+  function (snapshot) {
+    // console.log("EMOTIONS", snapshot.val());
     //**** */These variables will produce the number of clicks of each mood.****
     happy = snapshot.val().fHappy;
     sad = snapshot.val().fSad;
@@ -182,14 +180,14 @@ database.ref().on(
     tired = snapshot.val().fTired;
     love = snapshot.val().fLove;
 
-    
-//update chart
-chart.data.datasets[0].data = [happy, sad, angry, scared, tired, love];
-chart.update();
+
+    //update chart
+    chart.data.datasets[0].data = [happy, sad, angry, scared, tired, love];
+    chart.update();
 
     // Create Error Handling
   },
-  function(errorObject) {
+  function (errorObject) {
     console.log("The read failed: " + errorObject.code);
   }
 );
