@@ -1,23 +1,20 @@
-$(".dropdown-menu a").on("click", function () { 
- // var feeling = "happy"
- $(".gif").empty()
- var feeling = $(this).text();
- var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + feeling + "&api_key=FHh9mWC90FyTtVYHXSy5uFhHubUvyLWb&limit=10";
+$(".dropdown-menu a").on("click", function () {
 
- // We then created an AJAX call
- $.ajax({
-     url: queryURL,
-     method: "GET",
- }).then(function (response) {
-     console.log(response);
+    $(".gif").empty()
+    var feeling = $(this).text();
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + feeling + "&api_key=FHh9mWC90FyTtVYHXSy5uFhHubUvyLWb&limit=20";
 
-     var results = response.data[8];
-     var feelingGif = $("<img>").addClass("gif");
-         feelingGif.attr("src", results.images.fixed_height.url);
+    // We then created an AJAX call
+    $.ajax({
+        url: queryURL,
+        method: "GET",
+    }).then(function (response) {
+        var random = Math.floor(Math.random() * 21);
 
-     $(".gif").append(feelingGif);
+        var results = response.data[random];
+        var feelingGif = $("<img>").addClass("gif");
+        feelingGif.attr("src", results.images.fixed_height.url);
 
-    //  Still missing code to randomly choose gif from results 
-    
- });
+        $(".gif").append(feelingGif);
+    });
 });

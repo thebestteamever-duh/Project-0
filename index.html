@@ -13,98 +13,192 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+    <script src="https://apis.google.com/js/api.js"></script>
+
+    <!--------------------------Firebase--------------------------->
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <!------------------------- chart.js --------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
 
 
 </head>
 
 <body>
+    <!---------------------------- LOGO BAR ---------------------------->
     <div class="col-12 logo-bar">
-        <img src="assets/images/Mindset_logo-01.png" class="logo-image" alt="mindset-logo">
-    </div>
-    <hr class="header-bar">
-    <div class="jumbotron">
-        <h1 class="display-4">Project 0</h1>
-        <p class="lead">Start your day right with this app!</p>
-        <hr class="my-4">
-        <p class="p">Select your mood and let the app start your day!</p>
-    </div>
+        <div class="animate-logo">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 288 288"
+                style="enable-background:new 0 0 288 288;" xml:space="preserve">
+                <style type="text/css">
+                    .st0 {
+                        fill: none;
+                        stroke: #FFFFFF;
+                        stroke-width: 11;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-miterlimit: 10;
+                    }
+                </style>
+                <path class="st0"
+                    d="M275.9,136.6c0,0-63.5,56.4-91.7,51.7s-2.2-40.9-14.4-49.7c-13.5-9.7-45,48.2-65.6,43.5
+                    c-16-3.7,24.4-57.9,2.9-66.1c-15.4-5.9-55,85-55,85c18.2-32.3,28.4-80,21.8-94.1c-6-12.9-20.7-25.5-61.2-17.9" />
+            </svg>
 
-    <div class="dropright">
-        <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Your Current Emotion
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a id="mood" class="dropdown-item" href="#" value="Happy">Happy</a>
-            <a id="mood" class="dropdown-item" href="#" value="Sad">Sad</a>
-            <a id="mood" class="dropdown-item" href="#" value="Angry">Angry</a>
-            <a id="mood" class="dropdown-item" href="#" value="Scared">Scared</a>
-            <a id="mood" class="dropdown-item" href="#" value="Tired">Tired</a>
-            <a id="mood" class="dropdown-item" href="#" value="Love">Love</a>
+            <img src="../assets/images/Asset 1@2x.png" class="logo-image" alt="mindset-logo" />
         </div>
     </div>
+
+    <hr class="header-bar">
+    <div class="jumbotron row">
+        <div class="headline col-6">
+            <h1 class="display-4">Choose Your Mood</h1>
+        </div>
+        <!----------------------- HEADLINE ------------------------>
+        <div class="mobile">
+            <h1 class="headline-mobile">Choose Your Mood</h1>
+        </div>
+        <!-------------------- DROPDOWN MENU ---------------------->
+        <div class="mood-list col-6">
+            <div class="dropright">
+                <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    I'm feeling...
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a id="mood" class="dropdown-item" href="#" value="Happy">Happy</a>
+                    <a id="mood" class="dropdown-item" href="#" value="Sad">Sad</a>
+                    <a id="mood" class="dropdown-item" href="#" value="Angry">Angry</a>
+                    <a id="mood" class="dropdown-item" href="#" value="Scared">Scared</a>
+                    <a id="mood" class="dropdown-item" href="#" value="Tired">Tired</a>
+                    <a id="mood" class="dropdown-item" href="#" value="Love">Love</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <br><br>
 
-    <h3>The below will pop up after choosing an emotion:</h3>
     <div id="spotify">
         <div class="row">
-            <div class="spotifyDiv col-md-8">
+            <div class="contentDiv col-lg-8 col-md-6 col-sm-12" id="divSpotify">
                 <h2> This morning's Playlist</h2>
                 <hr class="my-4">
-                <iframe id="player" src="" width="600" height="280" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe id="player" src="" width="600" height="280" frameborder="0" allowtransparency="true"
+                    allow="encrypted-media"></iframe>
+                <br>
+                <br>
             </div>
 
-            <div class="weatherDiv col-md-4">
+            <div class="contentDiv col-lg-4 col-md-6 col-sm-12" id="divWeather">
                 <h2>Today's Weather</h2>
                 <hr class="my-4">
                 <div class="weather-info">
-                    <h2 id="temp">79</h2>
-                    <img class="fas fa-cloud fa-5x"></i>
+                    <div id="openweathermap-widget-15"></div>
+                    <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+                        window.myWidgetParam.push({
+                            id: 15, cityid: '4887398', appid: 'c8bcf8bb7a6d8ef744d855a989993230', units: 'imperial', containerid: 'openweathermap-widget-15',
+                        }); (
+                            function () {
+                                var script = document.createElement('script');
+                                script.async = true;
+                                script.charset = "utf-8";
+                                script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+                                var s = document.getElementsByTagName('script')[0];
+                                s.parentNode.insertBefore(script, s);
+                            })();</script>
                 </div>
                 <div class="facts">
                     <p id="weatherDescription"></p>
-                    <p>humidity: <span id="humidity">89%</span></p>
-                    <p>sunset: <span id="sunset"> Maybe</span></p>
+                    <p> <span id="humidity"></span></p>
+                    <p> <span id="sunset"> </span></p>
                 </div>
             </div>
         </div>
 
-        <div class="row">
 
-            <div class="quoteDiv col-md-6">
+        <div class="row">
+            <!-------------------- QUOTE ---------------------->
+            <div class="contentDiv col-md-6" id="divQuote">
                 <h2>Today's Quote</h2>
                 <hr class="my-4">
-                <div class="quoteText"></div>
-                <div class="quoteAuthor"></div>
+                <div class="quoteAll">
+                    <div class="quoteText"></div>
+                    <div class="quoteAuthor"></div>
+                </div>
+                <br>
             </div>
-
-            <div class="gifDiv col-md-6">
-                <h2>Gif goes here</h2>
+            <!-------------------- GIPHY ---------------------->
+            <div class="contentDiv col-md-6" id="divGif">
+                <h2>Your Current Mood:</h2>
                 <hr class="my-4">
                 <div class="gif"></div>
             </div>
         </div>
 
-<br><br>
+        <div class="row margin-row">
+            <!-------------------- CHART ---------------------->
+            <div class="contentDiv col-md-6" id="divMindset">
+                <h2>The World's Mindset</h2>
+                <hr class="my-4" />
+                <div class="chart-container" style="position: relative;">
+                    <canvas id="myChart" role="img" aria-label="world mood"
+                        style="max-width: 450px; margin: 0 auto;"></canvas>
+                </div>
+            </div>
 
+            <!-------------------- YOUTUBE ---------------------->
+            <div class="contentDiv col-md-6" id="divYoutube">
+                <h2>Yoga Based On Your Mood</h2>
+                <hr class="my-4">
+                <iframe class="player" width="560" height="315" src="" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+
+            <br><br>
+        </div>
+    </div>
+    <footer class="col-12 footer navbar fixed-bottom">
+        <img src="assets/images/Mindset_logo2-02.png" alt="">
+        <p>&copy TheBestTeamEverDuh 2019</p>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/javascript/quotes.js" type="text/javascript"></script>
-    <script src="assets/javascript/spotify.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
- 9566fe6804798891167e9792a56c24076b58227d
         crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script src="assets/javascript/giphy.js"></script>
-        <script src="assets/javascript/weather.js"></script>
-        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script src="assets/javascript/firebase.js"></script>
+    <!----------------------------Quotes----------------------------->
+    <script src="assets/javascript/quotes.js" type="text/javascript"></script>
+
+    <!---------------------------Spotify----------------------------->
+    <script src="assets/javascript/spotify.js" type="text/javascript"></script>
+
+    <!-------------------------Giphy--------------------------------->
+    <script src="assets/javascript/giphy.js"></script>
+
+    <!--------------------------Weather API-------------------------->
+    <script src="assets/javascript/weather.js"></script>
+
+    <!--------------------------Youtube API-------------------------->
+    <script src="assets/javascript/youtube.js"></script>
+
+    <!----------------------------Moment.js-------------------------->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
+
 </body>
 
 </html>

@@ -1,27 +1,40 @@
-/* ------------------ whole body ----------------- */
 
-#current-content {
-    margin: 40px;
+/* ------------------------- WHOLE BODY ------------------------ */
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    /* margin-bottom: 40px!important; */
 }
 
-/* body {
-    background: url(../images/prism.png);
-} */
+.row {
+    justify-content: center!important;
+}
 
-/* ------------------ header ----------------- */
+#spotify {
+    margin-top: -40px;
+}
+
+.margin-row {
+    margin-bottom: 80px;
+}
+/* ----------------------------- HEADER -------------------------- */
 
 .logo-bar {
     display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .logo-image {
     height: auto;
     width: auto;
-    max-width: 200px;
-    max-height: 110px;
+    max-width: 110px;
+    max-height: 80px;
 }
 
 .header-bar {
@@ -33,27 +46,74 @@
     background-color: linen;
 }
 
-/* -------------------------- jumbotron ------------------------------ */
+svg {
+    background-color: #f37168;
+    border-radius: 300px;
+    height: 75px;
+    width: 75px;
+    
+}
+
+path {
+    stroke-dasharray: 900;
+    animation: draw 2s;
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: -900;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.animate-logo {
+    display: flex;
+    align-items: center;
+}
+
+.row1-mobile {
+    display: none;
+}
+
+/* ---------------------------------- JUMBOTRON ---------------------------------- */
 
 .jumbotron {
-    height: 270px;
+    height: 350px;
     padding-top: 40px !important;
-    /* background-color: rgb(171, 210, 233) !important; */
     background: url(../images/light-bokeh-texture-wallpaper-2.jpg) no-repeat center center fixed;
     background-size: cover;
     border-style: none;
     border-radius: 0px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px!important;
 }
 
 h1, .lead, .p {
     color: white;
     text-shadow: 0px 1px 10px rgba(0, 0, 0, 1);
-    text-align: center;
+    text-align: left;
 }
 
-h1 {
+.headline {
+    width: 50%;
+    padding-left: 50px;
+}
+
+.headline-mobile {
+    display: none;
+}
+
+.display-4 {
     font-family: 'Rubik', sans-serif;
     font-weight: 900;
+    font-size: 7.5vw!important;
+    padding: 0px;
+    margin: 0px;
+    line-height: .9!important;
 }
 
 .lead, .p {
@@ -68,58 +128,86 @@ h1 {
     width: 70%;
 }
 
-/* ---------------------------------- dropdown button ------------------------------- */
+/* ---------------------------------- DROPDOWN MENU ------------------------------- */
 
 .dropright {
     display: flex;
     justify-content: center;
 }
 
+.mood-list {
+    width: 50%;
+}
+
 .btn {
-    /* color: rgba(35, 75, 112, 0.795) !important; */
-    /* background-color: rgba(209, 208, 208, 0.979) !important; */
-    border: 2px solid #1b3a47 !important;
-    color: #1b3a47 !important;
-    min-width: 40% !important;
-    background: linear-gradient(#fff, #efe8df);
+    border: none!important;
+    min-width: 50% !important;
+    background: linear-gradient(#ff772d, #f5905a);
+    box-shadow: 0px 0px 5px #00000000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400 !important;
+}
+
+.dropdown-menu {
+    background: linear-gradient(#502049, #b61084);
 }
 
 .dropdown-menu a {
     font-size: 17px;
+    border: none!important;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400 !important;
 }
 
-/* -------------------------------------- spotify div --------------------------------- */
+.dropdown-menu a:hover {
+    color: #ff772d!important;
+}
 
-.spotifyDiv {
-    background: url(../images/pink_gradient.jpg) no-repeat center;
+/* -------------------------------------- SPOTIFY DIV --------------------------------- */
+
+#player {
+    box-shadow: 0px 1px 20px #ffffff;
+}
+
+.contentDiv {
     background-size: cover;
     background-color: rgb(138, 102, 138);
-    /* border-style: solid; */
     min-height: 250px;
-    opacity: .7;
     text-align: center;
+    border: 10px solid #fff;
 }
 
-.spotifyDiv h2 {
+.contentDiv h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400 !important;
     color: white;
     text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
     font-size: 40px;
     padding-top: 20px;
-
 }
 
-/* ----------------------------------------- weather div ---------------------------------- */
+/* ----------------------------------------- WEATHER DIV ---------------------------------- */
 
-.weatherDiv {
-    background: url(../images/blue_gradient.jpg) no-repeat center;
-    background-size: cover;
-    /* height: 250px; */
-    border: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+#openweathermap-widget-15 {
+    box-shadow: 0px 1px 20px #ffffff;
+    margin-top: 17px;
+}
+
+.widget-right__title {
+    font-size: 40px !important;
+}
+
+.widget-right__header--brown {
+    background-image: linear-gradient(to top left, rgb(216, 197, 92), white) !important;
+}
+
+.weather-right--brown {
+    background-image: linear-gradient(to top right, white, rgb(216, 197, 92)) !important;
+}
+
+.weather-right__layout {
+    background-image: linear-gradient(to bottom, white), rgb(216, 204, 145) !important;
 }
 
 .weatherDiv h2 {
@@ -139,53 +227,9 @@ h1 {
     align-items: center;
 }
 
-.weather-info h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400 !important;
-    color: white;
-    text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
-    font-size: 80px;
-}
+/* ----------------------------------------- QUOTE DIV ---------------------------------- */
 
-.weatherDiv p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400 !important;
-    color: white;
-    text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
-}
-
-.facts {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.fas {
-    height: 100px;
-}
-
-#sunset {
-    font-weight: bold;
-    color: rgb(209, 197, 184);
-}
-
-#humidity {
-    font-weight: bold;
-    color: rgb(209, 197, 184);
-}
-
-/* ----------------------------------------- quote and horoscope divs ---------------------------------- */
-
-.quoteDiv {
-    background: url(../images/blue_gradient.jpg) no-repeat center center;
-    background-size: cover;
-    border: none;
-    min-height: 250px;
-    padding: 15px;
-}
-
-.quoteDiv h2 {
+*/ .quoteDiv h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400 !important;
     color: white;
@@ -203,17 +247,33 @@ h1 {
     font-size: 20px;
 }
 
-.quoteDiv p {
+.quoteText h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400 !important;
     color: white;
-    text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
+    text-shadow: 0px 1px 10px rgba(0, 0, 0, .9);
     text-align: center;
-    font-size: 24px;
+    font-size: 29px;
+}
+
+.quoteAll {
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+/* ----------------------------------------- GIPHY DIV ---------------------------------- */
+
+.gif img {
+    margin-top: 10px;
+    box-shadow: 0px 1px 20px #ffffff;
+    margin-bottom: 38px;
 }
 
 .gifDiv {
-    background: url(../images/pink_gradient.jpg) no-repeat center center;
     background-size: cover;
     min-height: 250px;
     border: none;
@@ -230,7 +290,7 @@ h1 {
 }
 
 .gifDiv p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', safpns-serif;
     font-weight: 400 !important;
     color: white;
     text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
@@ -242,10 +302,138 @@ h1 {
     margin-right: auto;
 }
 
-/* ----------------------------------------- media queries ---------------------------------- */
+/* ----------------------------------------- YOUTUBE DIV ---------------------------------- */
 
-@media only screen and (max-width: 400px) {
+.youtubeDiv h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400 !important;
+    color: white;
+    text-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
+    font-size: 40px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#divYoutube iframe {
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 20px #ffffff;
+}
+
+/* ----------------------------------------- CHART DIV ---------------------------------- */
+
+.chart-container {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    min-width: 30vw;
+    min-height: 20vh;
+}
+
+#myChart {
+    padding-bottom: 20px;
+    min-width: 30vw!important;
+    min-height: 20vh!important;
+    margin-top: 70px !important;
+}
+
+/* ----------------------------------------- FOOTER ---------------------------------- */
+.footer {
+    background-color: #f37168;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    align-content: center;
+
+}
+
+.footer img {
+    max-height: 50px;
+    padding-left: 10px;
+}
+
+.footer p {
+    padding-top: 15px;
+    padding-right: 10px;
+}
+
+
+/* ----------------------------------------- MEDIA QUERIES ---------------------------------- */
+@media only screen and (max-width: 1020px) {
+    iframe {
+        width: 450px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    iframe {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    iframe {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 728px) {
+    .row {
+        margin-left: 0px!important;
+        margin-right: 0px!important;
+    }
+    .jumbotron {
+        display: inline-block!important;
+        width: 100%!important;
+        margin: 0 auto;
+        height: auto;
+    }
+    .mobile {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+    .headline-mobile {
+        display: inline-block;
+        text-align: center;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 700;
+        font-size: 40px!important;
+        margin: 0 auto;
+    }
+    .display-4 {
+        display: none;
+    }
+    .contentDiv {
+        width: 100%;
+    }
+    .mood-list {
+        margin: 0 auto;
+    }
+
+    iframe {
+        width: 500px;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+    iframe {
+        width: 400px;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
     #current-content {
         margin: 25px;
     }
+
+    iframe {
+        width: 300px;
+    }
+
 }

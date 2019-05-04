@@ -13,23 +13,32 @@ $.ajax({
 
 
   // Variables for Weather Information
-  let wDesc = response.weather[0].description;
-  let temp = response.weather[0].description;
+  // var wDesc = response.weather[0].description;
 
-  var icon = response.weather[0].icon
-  var iconUrl = "http://openweathermap.org/img/w/" + icon + ".png"
+  // var icon = response.weather[0].icon
+  // var iconUrl = "http://openweathermap.org/img/w/" + icon + ".png"
 
-  var tempBase = Math.round(response.main.temp);
+  // var tempBase = Math.round(response.main.temp);
 
-  var sunset = response.sys.sunset
-  var time = moment.unix(sunset).format("HH: mm");
-  
+  // var sunset = response.sys.sunset
+  // var time = moment.unix(sunset).format("HH: mm");  
 
   // Code to insert weather information onto HTML page
-  $("#sunset").text(time);
-  $("#temp").text(tempBase);
-  $("#weatherDescription").text(response.weather[0].description);
-  $("#humidity").text(response.main.humidity);
-  $(".fas").attr("src", iconUrl);
+  // $("#sunset").text(time);
+  // $("#temp").text(tempBase + "℉");
+  // $("#humidity").text(response.main.humidity);
+  // $(".fas").attr("src", iconUrl);
+
+
+  // For 2 weather descriptions
+  // if (response.weather.length > 1) {
+  //   var wDesc2 = response.weather[1].description;
+  //   $("#weatherDescription").append(wDesc + " & " + wDesc2);
+  // }
+  // else {
+  //   $("#weatherDescription").append(wDesc);
+  // }
+
+  // console.log(response);
 });
 
